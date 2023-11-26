@@ -11,6 +11,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: "#64FF4B"
+      },
       fontFamily: {
         Inter: ["var(--font-inter)"],
         Monserrat: ["var(--font-montserrat)"],

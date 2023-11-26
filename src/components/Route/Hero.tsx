@@ -1,9 +1,10 @@
 "use client";
+import { socialLinks } from "@/styles/links";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import MarQuee from "react-fast-marquee";
-import { FaGithub, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
-import { GrGithub } from "react-icons/gr";
+import { FaEnvelope, FaGithub, FaLinkedin, FaTwitter, FaWhatsapp, FaYoutube } from "react-icons/fa";
 
 type Props = {};
 
@@ -60,22 +61,31 @@ const Hero = (props: Props) => {
     <div className="w-full md:min-h-screen flex items-center justify-center">
       <div>
         <h1 className="font-Monserrat text-4xl py-5 xl:text-7xl 2xl:text-8xl font-[700] text-center xl:leading-[80px] 2xl:leading-[100px] sm:mt-20">
-          <span className="text-[#64FF4B]">Abhishek Thory</span> <br />
+          <span className="text-primary">Abhishek Thory</span> <br />
           Full Stack Developer
         </h1>
-        <div className="flex gap-5 justify-center items-center text-2xl">
-          <span className=" hover:text-[#64FF4B] cursor-pointer">
+        <div className="flex gap-5 justify-center items-center text-2xl sm:text-3xl xl:text-4xl 2xl:text-5xl">
+          <Link href={socialLinks.github} target="_blank" className=" hover:text-primary">
             <FaGithub />
-          </span>
-          <span className=" hover:text-[#64FF4B] cursor-pointer">
+          </Link>
+          <Link href={socialLinks.twitter} target="_blank" className=" hover:text-primary">
             <FaTwitter />
-          </span>
-          <span className=" hover:text-[#64FF4B] cursor-pointer">
+          </Link>
+          <Link href={socialLinks.whatsapp} target="_blank" className=" hover:text-primary">
+            <FaEnvelope />
+          </Link>
+          <Link href={socialLinks.linkedin} target="_blank" className=" hover:text-primary">
             <FaLinkedin />
-          </span>
-          <span className=" hover:text-[#64FF4B] cursor-pointer">
+          </Link>
+          <Link href={socialLinks.youtube} target="_blank" className=" hover:text-primary">
             <FaYoutube />
-          </span>
+          </Link>
+          <Link href={socialLinks.whatsapp} target="_blank" className=" hover:text-primary">
+            <FaWhatsapp />
+          </Link>
+          <Link href={socialLinks.whatsapp} target="_blank" className=" hover:text-primary">
+            <FaEnvelope />
+          </Link>
         </div>
         <div className="md:mt-5">
           <Image

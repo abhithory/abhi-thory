@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main className="">
 
-      <div className="banner">
+      <div className="banner" id='projects'>
         <Header activeItem={0} />
         <Hero />
       </div>

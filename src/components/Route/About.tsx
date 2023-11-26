@@ -11,7 +11,7 @@ const About = (props: Props) => {
   const router = useRouter();
 
   return (
-    <div className="w-full relative grid md:grid-cols-2 md:py-8">
+    <div className="w-full relative grid md:grid-cols-2 md:py-8" id="about">
       <div className="col-span-1 w-full md:w-[60%] md:mt-5 px-5 md:px-[unset]">
         <Chip className={`${styles.button} mb-[30px] h-[37px] bg-[#12211f]`}>
           AI Image
