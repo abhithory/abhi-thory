@@ -43,6 +43,7 @@ body {
   border-radius: 50%;
   background: rgba(75, 255, 223, 0.24);
   filter: blur(227px);
+  pointer-events: none;
   /* z-index: -1; */
 }
 .banner::after {

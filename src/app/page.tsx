@@ -7,10 +7,12 @@ import Partners from '@/components/Route/Partners'
 import { styles } from '@/styles/styles'
 import { Divider } from '@nextui-org/react'
 import Image from 'next/image'
+import { GrGithub } from 'react-icons/gr'
 
 export default function Home() {
   return (
     <main className="">
+
       <div className="banner">
         <Header activeItem={0} />
         <Hero />
