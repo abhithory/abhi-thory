@@ -57,13 +57,14 @@ const Hero = (props: Props) => {
   return (
     <div className="w-full md:min-h-screen flex items-center justify-center">
       <div>
+        <h1 className="text-red-500 hidden">adlsfjdsklj</h1>
         <h1 className="font-Monserrat text-4xl py-5 xl:text-7xl 2xl:text-8xl font-[700] text-center xl:leading-[80px] 2xl:leading-[100px] sm:mt-20">
           Make <span className="text-[#64FF4B]">Ai Image</span> <br /> With Your{" "}
           <br /> Imagination
         </h1>
         <div className="md:mt-5">
           <Image
-            src={"assets/line.png"}
+            src={"/assets/line.png"}
             alt=""
             className="absolute hidden md:block"
             width={2000}

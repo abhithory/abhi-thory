@@ -1,9 +1,9 @@
-import Footer from '@/component/Layout/Footer'
-import Header from '@/component/Layout/Header'
-import About from '@/component/Route/About'
-import Future from '@/component/Route/Future'
-import Hero from '@/component/Route/Hero'
-import Partners from '@/component/Route/Partners'
+import Footer from '@/components/Layout/Footer'
+import Header from '@/components/Layout/Header'
+import About from '@/components/Route/About'
+import Future from '@/components/Route/Future'
+import Hero from '@/components/Route/Hero'
+import Partners from '@/components/Route/Partners'
 import { styles } from '@/styles/styles'
 import { Divider } from '@nextui-org/react'
 import Image from 'next/image'
@@ -48,7 +48,6 @@ export default function Home() {
           <br />
           <Future />
           <Partners />
-          {/* <SellersBanner /> */}
           <br />
           <br />
           <Divider className="bg-[#ffffff23]" />
