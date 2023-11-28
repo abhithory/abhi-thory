@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 import MarQuee from "react-fast-marquee";
 import { FaEnvelope, FaGithub, FaLinkedin, FaTwitter, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import ProjectCard from "../Cards/ProjectCard";
+import { personalProjects } from "@/assests/data";
 
 type Props = {};
 
@@ -62,6 +63,18 @@ const Hero = (props: Props) => {
     return null;
   }
 
+  const renderPersonalProjects = () => {
+    return Object.keys(personalProjects).map((key, index) => {
+      const item = personalProjects[key as keyof typeof personalProjects];
+      return (
+        <div className="mx-6" key={index}>
+          <ProjectCard projectDetail={item} />
+        </div>
+      );
+    });
+  };
+
+
   return (
     <div className="w-full md:min-h-screen flex items-center justify-center">
       <div>
@@ -85,22 +98,7 @@ const Hero = (props: Props) => {
         <div className="w-[100vw] mb-5 md:mb-20 relative">
           <div className="rotate-[-4deg] mt-10 md:mt-[6.5rem]">
             <MarQuee pauseOnClick={true} pauseOnHover={true} direction="right" >
-              {rowTwoImages.map((i, index) => (
-                // <Image
-                //   src={i.url}
-                //   key={index}
-                //   alt=""
-                //   
-                //   width={500}
-                //   height={300}
-                // />
-                <div
-                  key={index}
-                  className="mx-4 cursor-pointer"
-                >
-                  <ProjectCard img={i.url} />
-                </div>
-              ))}
+              {renderPersonalProjects()}
             </MarQuee>
             <MarQuee pauseOnClick={true} direction="left" pauseOnHover={true}>
               {rowOneImages.map((i, index) => (

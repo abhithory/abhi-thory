@@ -7,12 +7,20 @@ import { TbBrandNextjs, TbBrandTailwind, TbBrandTypescript } from "react-icons/t
 import { BiLogoTypescript } from "react-icons/bi";
 import { SiSolidity } from "react-icons/si";
 
-
-type ProjectCardProps = {
-    img: string
+type ProjectData = {
+    name: string;
+    des: string;
+    demo: string;
+    github: string;
+    image: string;
+    video?: string;
 }
 
-export default function ProjectCard({ img }: ProjectCardProps) {
+type ProjectCardProps = {
+    projectDetail: ProjectData;
+}
+
+export default function ProjectCard({ projectDetail }: ProjectCardProps) {
     const [liked, setLiked] = React.useState(false);
 
     return (
@@ -31,7 +39,7 @@ export default function ProjectCard({ img }: ProjectCardProps) {
         >
             <div className="relative">
                 <Image
-                    src={img}
+                    src={projectDetail.image}
                     alt=""
                     className="w-full !max-h-[200px] object-cover"
                     width={390}
@@ -39,10 +47,10 @@ export default function ProjectCard({ img }: ProjectCardProps) {
                 />
             </div>
             <div className="w-full justify-between mt-2">
-                <h3 className={`${styles.label} text-[18px] text-white`}>
-                    Authentication project
+                <h3 className={`${styles.label} text-[18px] text-white h-[4rem]`}>
+                    {projectDetail.name}
                 </h3>
-                <p className={`${styles.paragraph} text-white`}>this project is for authntication app</p>
+                <p className={`font-[6px] text-white overflow-hidden max-h-[4em] text-ellipsis"`}>{projectDetail.des}</p>
             </div>
             <Divider className="bg-[#ffffff18] my-3" />
             <div className="flex gap-2 flex-wrap">
