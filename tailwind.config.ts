@@ -12,7 +12,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#64FF4B"
+        primary: "#f52041", //64FF4B F53250
+        secondary: "#190737",
       },
       fontFamily: {
         Inter: ["var(--font-inter)"],

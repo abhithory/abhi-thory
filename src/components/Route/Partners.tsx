@@ -46,7 +46,7 @@ const Partners = (props: Props) => {
         Our Partner&apos;s
       </h1>
       <div className="w-full flex justify-center pt-3">
-        <div className="w-[50px] h-[2px] bg-[#64ff4b]" />
+        <div className="w-[50px] h-[2px] bg-primary" />
       </div>
       <Marquee className="w-full my-10">
         {partners.map((i, index) => (

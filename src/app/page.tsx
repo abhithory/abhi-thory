@@ -17,45 +17,29 @@ export default function Home() {
         <Header activeItem={0} />
         <Hero />
       </div>
-      <Image
+      {/* <Image
         src={"https://pixner.net/aikeu/assets/images/footer/shape-two.png"}
         width={120}
         height={120}
         alt=""
         className="absolute right-[-30px]"
-      />
-      <br />
-      <div className="w-[95%] md:w-[90%] xl:w-[80%] 2xl:w-[75%] m-auto">
+      /> */}
+      {/* <br /> */}
+      {/* <div className="w-[95%] md:w-[90%] xl:w-[80%] 2xl:w-[75%] m-auto">
         <About />
         <div>
           <h1 className={`${styles.heading} p-2 font-Monserrat`}>
             Latest Prompts
           </h1>
-          {/* <div className="w-full flex flex-wrap mt-5">
-              {loading ? (
-                [...new Array(8)].map((i) => (
-                  <>
-                    <PromptCardLoader />
-                  </>
-                ))
-              ) : (
-                <>
-                  {prompts &&
-                    prompts.map((item: any) => (
-                      <PromptCard prompt={item} key={item.id} />
-                    ))}
-                </>
-              )}
-            </div> */}
           <br />
           <Future />
           <Partners />
           <br />
           <br />
-          <Divider className="bg-[#ffffff23]" />
-          <Footer />
-        </div>
-      </div>
+          </div>
+        </div> */}
+      <Divider className="bg-[#ffffff23]" />
+      <Footer />
     </main>
   )
 }

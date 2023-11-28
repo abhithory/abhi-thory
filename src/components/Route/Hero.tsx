@@ -1,5 +1,5 @@
 "use client";
-import { socialLinks } from "@/styles/links";
+import useSocialMediaLinks from "@/hooks/useSocialMediaLinks";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
@@ -7,6 +7,7 @@ import MarQuee from "react-fast-marquee";
 import { FaEnvelope, FaGithub, FaLinkedin, FaTwitter, FaWhatsapp, FaYoutube } from "react-icons/fa";
 
 type Props = {};
+
 
 const rowOneImages = [
   {
@@ -44,8 +45,11 @@ const rowTwoImages = [
   },
 ];
 
+
 const Hero = (props: Props) => {
   const [mounted, setmounted] = useState(false);
+
+  const { renderSocialMediaLinks } = useSocialMediaLinks();
 
   useEffect(() => {
     if (!mounted) {
@@ -65,27 +69,7 @@ const Hero = (props: Props) => {
           Full Stack Developer
         </h1>
         <div className="flex gap-5 justify-center items-center text-2xl sm:text-3xl xl:text-4xl 2xl:text-5xl">
-          <Link href={socialLinks.github} target="_blank" className=" hover:text-primary">
-            <FaGithub />
-          </Link>
-          <Link href={socialLinks.twitter} target="_blank" className=" hover:text-primary">
-            <FaTwitter />
-          </Link>
-          <Link href={socialLinks.whatsapp} target="_blank" className=" hover:text-primary">
-            <FaEnvelope />
-          </Link>
-          <Link href={socialLinks.linkedin} target="_blank" className=" hover:text-primary">
-            <FaLinkedin />
-          </Link>
-          <Link href={socialLinks.youtube} target="_blank" className=" hover:text-primary">
-            <FaYoutube />
-          </Link>
-          <Link href={socialLinks.whatsapp} target="_blank" className=" hover:text-primary">
-            <FaWhatsapp />
-          </Link>
-          <Link href={socialLinks.whatsapp} target="_blank" className=" hover:text-primary">
-            <FaEnvelope />
-          </Link>
+          {renderSocialMediaLinks()}
         </div>
         <div className="md:mt-5">
           <Image
