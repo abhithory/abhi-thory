@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import MarQuee from "react-fast-marquee";
 import { FaEnvelope, FaGithub, FaLinkedin, FaTwitter, FaWhatsapp, FaYoutube } from "react-icons/fa";
+import ProjectCard from "../Cards/ProjectCard";
 
 type Props = {};
 
@@ -71,7 +72,7 @@ const Hero = (props: Props) => {
         <div className="flex gap-5 justify-center items-center text-2xl sm:text-3xl xl:text-4xl 2xl:text-5xl">
           {renderSocialMediaLinks()}
         </div>
-        <div className="md:mt-5">
+        {/* <div className="md:mt-5">
           <Image
             src={"/assets/line.png"}
             alt=""
@@ -79,20 +80,26 @@ const Hero = (props: Props) => {
             width={2000}
             height={2}
           />
-        </div>
+        </div> */}
 
         <div className="w-[100vw] mb-5 md:mb-20 relative">
           <div className="rotate-[-4deg] mt-10 md:mt-[6.5rem]">
             <MarQuee pauseOnClick={true} pauseOnHover={true} direction="right" >
               {rowTwoImages.map((i, index) => (
-                <Image
-                  src={i.url}
+                // <Image
+                //   src={i.url}
+                //   key={index}
+                //   alt=""
+                //   
+                //   width={500}
+                //   height={300}
+                // />
+                <div
                   key={index}
-                  alt=""
-                  className="md:m-4 w-[200px] m-2 md:w-[500px] rounded-[20px] cursor-pointer"
-                  width={500}
-                  height={300}
-                />
+                  className="mx-4 cursor-pointer"
+                >
+                  <ProjectCard img={i.url} />
+                </div>
               ))}
             </MarQuee>
             <MarQuee pauseOnClick={true} direction="left" pauseOnHover={true}>
