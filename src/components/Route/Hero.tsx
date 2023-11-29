@@ -6,52 +6,21 @@ import React, { useEffect, useState } from "react";
 import MarQuee from "react-fast-marquee";
 import { FaEnvelope, FaGithub, FaLinkedin, FaTwitter, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import ProjectCard from "../Cards/ProjectCard";
-import { personalProjects } from "@/assests/data";
+import { personalProjects } from "@/assests/data/projectsData";
+import { Chip } from "@nextui-org/react";
+import { TbBrandNextjs } from "react-icons/tb";
+import useSkills from "@/hooks/useSkills";
 
 type Props = {};
 
-
-const rowOneImages = [
-  {
-    url: "https://pixner.net/aikeu/assets/images/banner/large-slider/one.png",
-  },
-  {
-    url: "https://pixner.net/aikeu/assets/images/banner/large-slider/two.png",
-  },
-  {
-    url: "https://pixner.net/aikeu/assets/images/banner/large-slider/three.png",
-  },
-  {
-    url: "https://pixner.net/aikeu/assets/images/banner/large-slider/four.png",
-  },
-  {
-    url: "https://pixner.net/aikeu/assets/images/banner/large-slider/five.png",
-  },
-];
-
-const rowTwoImages = [
-  {
-    url: "https://pixner.net/aikeu/assets/images/banner/small-slider/one.png",
-  },
-  {
-    url: "https://pixner.net/aikeu/assets/images/banner/small-slider/two.png",
-  },
-  {
-    url: "https://pixner.net/aikeu/assets/images/banner/small-slider/three.png",
-  },
-  {
-    url: "https://pixner.net/aikeu/assets/images/banner/small-slider/four.png",
-  },
-  {
-    url: "https://pixner.net/aikeu/assets/images/banner/small-slider/five.png",
-  },
-];
 
 
 const Hero = (props: Props) => {
   const [mounted, setmounted] = useState(false);
 
   const { renderSocialMediaLinks } = useSocialMediaLinks();
+  const { allSkills } = useSkills();
+
 
   useEffect(() => {
     if (!mounted) {
@@ -63,16 +32,6 @@ const Hero = (props: Props) => {
     return null;
   }
 
-  const renderPersonalProjects = () => {
-    return Object.keys(personalProjects).map((key, index) => {
-      const item = personalProjects[key as keyof typeof personalProjects];
-      return (
-        <div className="mx-6" key={index}>
-          <ProjectCard projectDetail={item} />
-        </div>
-      );
-    });
-  };
 
 
   return (
@@ -96,21 +55,26 @@ const Hero = (props: Props) => {
         </div> */}
 
         <div className="w-[100vw] mb-5 md:mb-20 relative">
-          <div className="rotate-[-4deg] mt-10 md:mt-[6.5rem]">
-            <MarQuee pauseOnClick={true} pauseOnHover={true} direction="right" >
-              {renderPersonalProjects()}
+          <div className="rotate-[-4deg] my-10 md:mt-[6.5rem]">
+            <MarQuee pauseOnClick={true} direction="left" pauseOnHover={true} speed={50}>
+              {Object.keys(allSkills).map((key, index) => {
+                const item = allSkills[key as keyof typeof allSkills];
+                return (
+                  <div className="mx-2 cursor-pointer" key={index} >
+                    <Chip className="text-3xl p-8 hover:text-warning hover:border-warning" color="primary" variant="bordered" radius="md" startContent={item.icon}>{item.name}</Chip>
+                  </div>
+                );
+              })}
             </MarQuee>
-            <MarQuee pauseOnClick={true} direction="left" pauseOnHover={true}>
-              {rowOneImages.map((i, index) => (
-                <Image
-                  src={i.url}
-                  key={index}
-                  alt=""
-                  className="md:m-4 w-[200px] m-2 md:w-[500px] rounded-[20px] cursor-pointer"
-                  width={500}
-                  height={300}
-                />
-              ))}
+            <MarQuee pauseOnClick={true} pauseOnHover={true} direction="right" className="mt-8" speed={50}>
+              {Object.keys(personalProjects).map((key, index) => {
+                const item = personalProjects[key as keyof typeof personalProjects];
+                return (
+                  <div className="mx-6" key={index}>
+                    <ProjectCard projectDetail={item} />
+                  </div>
+                );
+              })}
             </MarQuee>
           </div>
         </div>

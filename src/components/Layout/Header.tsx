@@ -24,7 +24,8 @@ const Header = ({ activeItem }: Props) => {
     <div
       // className={`w-full px-5 py-8 border-b min-h-[60px] border-b-[#ffffff32] transition-opacity ${active && "fixed top-0 left-0  z-[9999]"
       //   }`}
-      className={`w-full px-5 py-8 border-b min-h-[60px] border-b-lineColor ${active ? "fixed top-0 left-0 z-[9999] transition-opacity duration-500 ease-in-out bg-black bg-opacity-20 backdrop-blur-md border-b-0" : ""}`}
+      className={`w-full px-5 py-8 border-b min-h-[60px] border-b-lineColor }`}
+    // className={`w-full px-5 py-8 border-b min-h-[60px] border-b-lineColor ${active ? "fixed top-0 left-0 z-[9999] transition-opacity duration-500 ease-in-out bg-black bg-opacity-20 backdrop-blur-md border-b-0" : ""}`}
 
     >
       <div className="flex items-center justify-between ">

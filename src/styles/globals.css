@@ -58,6 +58,7 @@ body {
   border-radius: 50%;
   background: rgba(75, 169, 255, 0.44);
   filter: blur(272px);
+  pointer-events: none;
   /* z-index: -1; */
 }
 .shop-banner {

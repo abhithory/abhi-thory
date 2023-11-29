@@ -15,7 +15,9 @@ const config: Config = {
         primary: "#f52041", //64FF4B F53250
         secondary: "#190737",
         background: "#130f23",
-        lineColor: "#ffffff32"
+        lineColor: "#ffffff32",
+        white: "#ffff",
+        black: "#000",
       },
       fontFamily: {
         Inter: ["var(--font-inter)"],
