@@ -22,14 +22,16 @@ const Header = ({ activeItem }: Props) => {
 
   return (
     <div
-      className={`w-full p-5 border-b min-h-[60px] border-b-[#ffffff32] transition-opacity ${active && "fixed top-0 left-0 bg-[#000] z-[9999]"
-        }`}
+      // className={`w-full px-5 py-8 border-b min-h-[60px] border-b-[#ffffff32] transition-opacity ${active && "fixed top-0 left-0  z-[9999]"
+      //   }`}
+      className={`w-full px-5 py-8 border-b min-h-[60px] border-b-lineColor ${active ? "fixed top-0 left-0 z-[9999] transition-opacity duration-500 ease-in-out bg-black bg-opacity-20 backdrop-blur-md border-b-0" : ""}`}
+
     >
       <div className="flex items-center justify-between ">
         <Navigation activeItem={activeItem} />
         <div>
           <Link href={"/"}>
-            <h1 className="text-3xl cursor-pointer font-semibold">
+            <h1 className="text-2xl cursor-pointer font-semibold">
               <span className="text-primary">@Abhi</span>Thory
             </h1>
           </Link>
