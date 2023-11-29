@@ -75,3 +75,20 @@ body {
 .sellers-banner {
   background: linear-gradient(132deg, #5fec46 0%, #46e695 100%);
 }
+
+.slick-dots li button::before {
+  font-size: 1rem;
+  color: White !important;
+}
+
+.slick-dots li button:before {
+  color: white !important;
+}
+
+.slick-prev::before {
+  font-size: 2rem;
+}
+
+.slick-next::before {
+  font-size: 2rem;
+}

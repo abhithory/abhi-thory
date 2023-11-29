@@ -21,7 +21,6 @@ type ProjectCardProps = {
 }
 
 export default function ProjectCard({ projectDetail }: ProjectCardProps) {
-    const [liked, setLiked] = React.useState(false);
 
     return (
 

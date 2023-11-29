@@ -39,11 +39,11 @@ const partners = [
   },
 ];
 
-const Partners = (props: Props) => {
+const Reviews = (props: Props) => {
   return (
     <div className="py-10">
       <h1 className={`${styles.heading} font-Monserrat text-center`}>
-        Our Partner&apos;s
+        Reviews
       </h1>
       <div className="w-full flex justify-center pt-3">
         <div className="w-[50px] h-[2px] bg-primary" />
@@ -64,4 +64,4 @@ const Partners = (props: Props) => {
   );
 };
 
-export default Partners;
+export default Reviews;

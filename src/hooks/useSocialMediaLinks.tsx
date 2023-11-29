@@ -1,12 +1,16 @@
 import Link from 'next/link';
 import React from 'react';
-import { FaEnvelope, FaGithub, FaLinkedin, FaTwitter, FaWhatsapp, FaYoutube } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaLinkedin, FaTelegram, FaTwitter, FaWhatsapp, FaYoutube } from "react-icons/fa";
 
 export default function useSocialMediaLinks() {
     const socialLinks = {
-        whatsapp: {
-            link: "https://www.whatsapp.com/channel/0029VaAAtHYDTkKAYXlQjn2y",
-            icon: <FaWhatsapp />
+        telegram: {
+            link: "https://t.me/abhi_thory",
+            icon: <FaTelegram />
+        },
+        linkedin: {
+            link: "https://www.linkedin.com/in/abhithory/",
+            icon: <FaLinkedin />
         },
         github: {
             link: "https://github.com/abhithory",
@@ -20,9 +24,10 @@ export default function useSocialMediaLinks() {
             link: "https://www.youtube.com/@abhithory",
             icon: <FaYoutube />
         },
-        linkedin: {
-            link: "https://www.linkedin.com/in/abhithory/",
-            icon: <FaLinkedin />
+
+        whatsapp: {
+            link: "https://www.whatsapp.com/channel/0029VaAAtHYDTkKAYXlQjn2y",
+            icon: <FaWhatsapp />
         },
         email: {
             link: "mailto:your.email@example.com", // Replace with your email address
