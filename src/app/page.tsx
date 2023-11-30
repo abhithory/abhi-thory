@@ -97,7 +97,7 @@ export default function Home() {
         className="absolute right-[-30px]"
       /> */}
 
-
+      {/* 
       <div className="w-[95%] md:w-[90%] 2xl:w-[85%] mx-auto my-12">
         <h1 className={`${styles.heading} p-2 font-Monserrat`}>
           Personal Projects
@@ -141,11 +141,10 @@ export default function Home() {
           })}
         </Slider>
       </div>
-      {/* <Future /> */}
       <Divider className="bg-[#ffffff23]" />
       <Reviews />
 
-      <Footer />
+      <Footer /> */}
     </main >
   )
 }

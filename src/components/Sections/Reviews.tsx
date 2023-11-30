@@ -28,7 +28,7 @@ const Reviews = (props: Props) => {
   };
 
   return (
-    <div className="py-10">
+    <div className="py-10" id="reviews">
       <h1 className={`${styles.heading} font-Monserrat text-center`}>
         Reviews
       </h1>

@@ -25,7 +25,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${monserrat.variable}`}>{children}</body>
+      <body className={`${inter.variable} ${monserrat.variable}`}>
+        {children}
+      </body>
     </html>
   )
 }

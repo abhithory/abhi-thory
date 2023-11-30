@@ -11,8 +11,8 @@ const navItems = [
     href: "#hello",
   },
   // {
-  //   title: "About Me",
-  //   href: "#about",
+  //   title: "Reviews",
+  //   href: "#reviews",
   // },
   // {
   //   title: "Marketplace",

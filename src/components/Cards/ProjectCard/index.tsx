@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardBody, Image, Button, Slider, Divider, Avatar, Link, Chip, CardFooter } from "@nextui-org/react";
+import { Card, CardBody, Image, Button, Slider, Divider, Avatar, Link, Chip, CardFooter, ScrollShadow } from "@nextui-org/react";
 import { styles } from "@/styles/styles";
 import { FaConnectdevelop, FaGithub } from "react-icons/fa";
 import { GrGithub } from "react-icons/gr";
@@ -40,10 +40,12 @@ export default function ProjectCard({ projectDetail }: ProjectCardProps) {
                     />
                 </div>
                 <div className="w-full justify-between mt-2">
-                    <h3 className={`${styles.label} text-[18px] text-white h-[4rem]`}>
+                    <h3 className={`${styles.label} text-[18px] text-white h-[3.4rem]`}>
                         {projectDetail.name}
                     </h3>
-                    <p className={`font-[6px] text-white overflow-hidden max-h-[4em] text-ellipsis"`}>{projectDetail.des}</p>
+                    <ScrollShadow hideScrollBar className="h-16">
+                        <p className={`font-[6px] text-white `}>{projectDetail.des}</p>
+                    </ScrollShadow>
                 </div>
                 <Divider className="bg-[#ffffff18] my-3" />
                 <div className="flex gap-2 flex-wrap">

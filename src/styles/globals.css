@@ -4,15 +4,12 @@
 
 body {
   background: #030015 !important;
-  font-size: 16px;
   font-weight: 400;
-  max-width: 100vw;
+  width: 100vw;
   min-height: 100vh;
-  overflow-x: clip;
+  /* overflow-x: hidden; */
+  /* overflow: hidden; */
   color: #fff;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: transparent;
-  scroll-behavior: smooth;
 }
 
 * {
@@ -20,6 +17,7 @@ body {
 }
 
 .banner {
+  width: 100vw;
   min-height: 100vh;
   background-image: url("https://pixner.net/aikeu/assets/images/banner/banner-one-bg.png");
   background-position: center center;
@@ -27,15 +25,11 @@ body {
   overflow: hidden;
   z-index: 1;
 }
-/* @media screen and (max-width: 760px) {
-  .banner {
-    min-height: unset !important;
-  }
-} */
+
 .banner::before {
   position: absolute;
   top: 0px;
-  left: -150px;
+  left: 0;
   content: "";
   width: 500px;
   height: 500px;
@@ -44,13 +38,12 @@ body {
   background: rgba(75, 255, 223, 0.24);
   filter: blur(227px);
   pointer-events: none;
-  /* z-index: -1; */
 }
 .banner::after {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: -100px;
+  right: 0;
   content: "";
   width: 430px;
   height: 430px;
@@ -59,7 +52,16 @@ body {
   background: rgba(75, 169, 255, 0.44);
   filter: blur(272px);
   pointer-events: none;
-  /* z-index: -1; */
+}
+@media screen and (max-width: 760px) {
+  .banner::before {
+    width: 250px;
+    height: 250px;
+  }
+  .banner::after {
+    width: 230px;
+    height: 230px;
+  }
 }
 .shop-banner {
   background-image: url("https://pixner.net/aikeu/assets/images/banner/cmn-bg.png");
