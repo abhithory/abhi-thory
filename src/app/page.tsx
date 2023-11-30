@@ -1,10 +1,7 @@
 "use client"
 import Footer from '@/components/Layout/Footer'
 import Header from '@/components/Layout/Header'
-import About from '@/components/Route/About'
-import Future from '@/components/Route/Future'
 import Hero from '@/components/Route/Hero'
-import Partners from '@/components/Route/Partners'
 import { styles } from '@/styles/styles'
 import { Divider } from '@nextui-org/react'
 
@@ -13,6 +10,10 @@ import { freelanceProjects, opensourceProjects, personalProjects } from '@/asses
 import ProjectCard from '@/components/Cards/ProjectCard';
 
 import Slider from "react-slick";
+
+import Image from "next/image";
+import Reviews from '@/components/Sections/Reviews'
+
 
 
 export default function Home() {
@@ -80,6 +81,7 @@ export default function Home() {
   };
 
 
+
   return (
     <main className="">
 
@@ -94,7 +96,6 @@ export default function Home() {
         alt=""
         className="absolute right-[-30px]"
       /> */}
-      <Partners />
 
 
       <div className="w-[95%] md:w-[90%] 2xl:w-[85%] mx-auto my-12">
@@ -142,6 +143,8 @@ export default function Home() {
       </div>
       {/* <Future /> */}
       <Divider className="bg-[#ffffff23]" />
+      <Reviews />
+
       <Footer />
     </main >
   )

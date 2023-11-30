@@ -11,15 +11,15 @@ const Reviews = (props: Props) => {
   const renderReviews = () => {
     const reviews = [];
 
-    for (let i = 1; i <= 14; i++) {
+    for (let i = 1; i <= 16; i++) {
       reviews.push(
         <Image
           key={i}
           src={`/abhi/reviews/${i}.png`}
           alt=""
-          width={600}
-          height={200}
-          className="mx-4 w-[600px] object-contain  cursor-pointer border-secondary border-4 rounded-2xl  transition-transform hover:scale-105"
+          width={400}
+          height={100}
+          className=" mx-4  w-[300px] md:w-[400px] xl:w-[600px] object-contain cursor-pointer border-secondary border-4 rounded-2xl  transition-transform hover:scale-105"
         />
       );
     }
