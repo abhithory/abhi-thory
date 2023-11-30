@@ -7,7 +7,7 @@ body {
   font-weight: 400;
   width: 100vw;
   min-height: 100vh;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   /* overflow: hidden; */
   color: #fff;
 }
@@ -63,34 +63,17 @@ body {
     height: 230px;
   }
 }
-.shop-banner {
-  background-image: url("https://pixner.net/aikeu/assets/images/banner/cmn-bg.png");
-  background-position: center center;
-  background-size: cover;
-  overflow: hidden;
-  z-index: 1;
-  height: 50vh;
-}
-.before\:transition-background::before {
-  background-color: transparent !important;
-}
-.sellers-banner {
-  background: linear-gradient(132deg, #5fec46 0%, #46e695 100%);
+
+::-webkit-scrollbar {
+  width: 2px;
+  background: #030015 !important;
 }
 
-.slick-dots li button::before {
-  font-size: 1rem;
-  color: White !important;
+::-webkit-scrollbar-thumb {
+  background: rgba(75, 169, 255, 0.44);
+  border-radius: 2px;
 }
 
-.slick-dots li button:before {
-  color: white !important;
-}
-
-.slick-prev::before {
-  font-size: 2rem;
-}
-
-.slick-next::before {
-  font-size: 2rem;
+::-webkit-scrollbar-corner {
+  background: transparent !important;
 }

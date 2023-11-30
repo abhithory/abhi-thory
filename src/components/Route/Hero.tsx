@@ -35,16 +35,15 @@ const Hero = (props: Props) => {
 
 
   return (
-    <div className="w-full md:min-h-screen flex items-center justify-center">
-      <div>
-        <h1 className="font-Monserrat text-4xl py-5 xl:text-7xl 2xl:text-8xl font-[700] text-center xl:leading-[80px] 2xl:leading-[100px] sm:mt-20">
-          <span className="text-primary">Abhishek Thory</span> <br />
-          Full Stack Developer
-        </h1>
-        <div className="flex gap-5 justify-center items-center text-2xl sm:text-3xl xl:text-4xl 2xl:text-5xl">
-          {renderSocialMediaLinks()}
-        </div>
-        {/* <div className="md:mt-5">
+    <div className="">
+      <h1 className="font-Monserrat text-4xl py-5 xl:text-7xl 2xl:text-8xl font-[700] text-center xl:leading-[80px] 2xl:leading-[100px] sm:mt-20">
+        <span className="text-primary">Abhishek Thory</span> <br />
+        Full Stack Developer
+      </h1>
+      <div className="flex gap-5 justify-center items-center text-2xl sm:text-3xl xl:text-4xl 2xl:text-5xl">
+        {renderSocialMediaLinks()}
+      </div>
+      {/* <div className="md:mt-5">
           <Image
             src={"/assets/line.png"}
             alt=""
@@ -54,30 +53,30 @@ const Hero = (props: Props) => {
           />
         </div> */}
 
-        <div className="w-[100vw] mb-5 md:mb-20 relative">
-          <div className="rotate-[-4deg] my-10 md:mt-[6.5rem]">
-            <MarQuee pauseOnClick={true} direction="left" pauseOnHover={true} speed={50}>
-              {Object.keys(allSkills).map((key, index) => {
-                const item = allSkills[key as keyof typeof allSkills];
-                return (
-                  <div className="mx-2 cursor-pointer" key={index} >
-                    <Chip className="text-3xl p-8 hover:text-warning hover:border-warning" color="primary" variant="bordered" radius="md" startContent={item.icon}>{item.name}</Chip>
-                  </div>
-                );
-              })}
-            </MarQuee>
-            <MarQuee pauseOnClick={true} pauseOnHover={true} direction="right" className="mt-8" speed={50}>
-              {Object.keys(personalProjects).map((key, index) => {
-                const item = personalProjects[key as keyof typeof personalProjects];
-                return (
-                  <div className="mx-6" key={index}>
-                    <ProjectCard projectDetail={item} />
-                  </div>
-                );
-              })}
-            </MarQuee>
-          </div>
-        </div>
+
+      <div className="rotate-[-4deg] w-[100vw] mt-20">
+        <MarQuee pauseOnClick={true} direction="left" pauseOnHover={false} speed={50}>
+          {Object.keys(allSkills).map((key, index) => {
+            const item = allSkills[key as keyof typeof allSkills];
+            return (
+              <div className="mx-2 cursor-pointer" key={index} >
+                <Chip className="text-3xl p-8 hover:text-warning hover:border-warning" color="primary" variant="bordered" radius="md" startContent={item.icon}>{item.name}</Chip>
+              </div>
+            );
+          })}
+        </MarQuee>
+      </div>
+      <div className="rotate-[-4deg] w-[100vw] mt-20">
+        <MarQuee pauseOnClick={true} pauseOnHover={true} direction="right" className="mt-8" speed={50}>
+          {Object.keys(personalProjects).map((key, index) => {
+            const item = personalProjects[key as keyof typeof personalProjects];
+            return (
+              <div className="mx-2" key={index}>
+                <ProjectCard projectDetail={item} />
+              </div>
+            );
+          })}
+        </MarQuee>
       </div>
     </div>
   );
