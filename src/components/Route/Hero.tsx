@@ -3,13 +3,11 @@ import useSocialMediaLinks from "@/hooks/useSocialMediaLinks";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import MarQuee from "react-fast-marquee";
-import { FaEnvelope, FaGithub, FaLinkedin, FaTwitter, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import ProjectCard from "../Cards/ProjectCard";
 import { personalProjects } from "@/assests/data/projectsData";
 import { Chip } from "@nextui-org/react";
-import { TbBrandNextjs } from "react-icons/tb";
 import useSkills from "@/hooks/useSkills";
+import Marquee from "react-fast-marquee";
 
 type Props = {};
 
@@ -54,8 +52,8 @@ const Hero = (props: Props) => {
         </div> */}
 
 
-      <div className="rotate-[-4deg] w-[100vw] mt-20">
-        <MarQuee pauseOnClick={true} direction="left" pauseOnHover={false} speed={50}>
+      <div className="rotate-[-4deg] w-[100vw] mt-20 ">
+        <Marquee pauseOnHover={true}>
           {Object.keys(allSkills).map((key, index) => {
             const item = allSkills[key as keyof typeof allSkills];
             return (
@@ -64,19 +62,22 @@ const Hero = (props: Props) => {
               </div>
             );
           })}
-        </MarQuee>
+
+        </Marquee>
       </div>
-      <div className="rotate-[-4deg] w-[100vw] mt-20">
-        <MarQuee pauseOnClick={true} pauseOnHover={true} direction="right" className="mt-8" speed={50}>
+
+      <div className="rotate-[-4deg] w-[100vw] mb-20 mt-10">
+        <Marquee direction="right" pauseOnHover={true}>
           {Object.keys(personalProjects).map((key, index) => {
             const item = personalProjects[key as keyof typeof personalProjects];
             return (
               <div className="mx-2" key={index}>
                 <ProjectCard projectDetail={item} />
+
               </div>
             );
           })}
-        </MarQuee>
+        </Marquee>
       </div>
     </div>
   );

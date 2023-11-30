@@ -23,13 +23,10 @@ type ProjectCardProps = {
 export default function ProjectCard({ projectDetail }: ProjectCardProps) {
 
     return (
-
-        <Card
-            radius="lg"
-            isBlurred={true}
-            className="border-none bg-background/60 w-[400px] shadow-lg overflow-hidden"
-        >
-            <CardBody>
+        <>
+            <div
+                className="border-none bg-background/60 w-[400px] shadow-lg overflow-hidden rounded-lg p-2"
+            >
                 <div className="relative">
                     <Image
                         src={projectDetail.image}
@@ -39,15 +36,15 @@ export default function ProjectCard({ projectDetail }: ProjectCardProps) {
                         height={300}
                     />
                 </div>
-                {/* <div className="w-full justify-between mt-2">
+                <div className="w-full justify-between mt-2">
                     <h3 className={`${styles.label} text-[18px] text-white h-[3.4rem]`}>
                         {projectDetail.name}
                     </h3>
                     <ScrollShadow hideScrollBar className="h-16">
                         <p className={`font-[6px] text-white `}>{projectDetail.des}</p>
                     </ScrollShadow>
-                </div> */}
-                {/* 
+                </div>
+
                 <Divider className="bg-[#ffffff18] my-3" />
                 <div className="flex gap-2 flex-wrap">
                     <Chip color="warning" variant="solid" radius="md" startContent={<TbBrandNextjs />}>Nextjs</Chip>
@@ -55,7 +52,7 @@ export default function ProjectCard({ projectDetail }: ProjectCardProps) {
                     <Chip color="warning" variant="solid" radius="md" startContent={<TbBrandTailwind />}>TailwindCss</Chip>
                     <Chip color="warning" variant="solid" radius="md" startContent={<SiSolidity />}>Solidity</Chip>
                 </div>
-            */}
+
                 <Divider className="bg-[#ffffff18] my-3" />
                 <div className="flex justify-between px-4 w-full">
                     <Button isIconOnly color="primary" variant="bordered">
@@ -67,8 +64,8 @@ export default function ProjectCard({ projectDetail }: ProjectCardProps) {
                         </Link>
                     </Button>
                 </div>
-            </CardBody>
 
-        </Card>
+            </div>
+        </>
     );
 }
