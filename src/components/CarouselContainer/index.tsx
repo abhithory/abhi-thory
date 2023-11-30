@@ -21,6 +21,8 @@ export default function CarouselContainer({ children, settings }: Props) {
         centerMode: true,
         centerPadding: "40px",
         // cssEase: "linear",
+        nextArrow: <></>,
+        prevArrow: <></>,
         responsive: [
             {
                 breakpoint: 1444,
@@ -41,6 +43,7 @@ export default function CarouselContainer({ children, settings }: Props) {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     centerPadding: "20px",
+
 
                 }
             }

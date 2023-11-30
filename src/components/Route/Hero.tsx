@@ -58,7 +58,7 @@ const Hero = (props: Props) => {
             const item = allSkills[key as keyof typeof allSkills];
             return (
               <div className="mx-2 cursor-pointer" key={index} >
-                <Chip className="text-3xl p-8 hover:text-warning hover:border-warning" color="primary" variant="bordered" radius="md" startContent={item.icon}>{item.name}</Chip>
+                <Chip className="text-1xl md:text-3xl p-5 md:p-8 hover:text-warning hover:border-warning" color="primary" variant="bordered" radius="md" startContent={item.icon}>{item.name}</Chip>
               </div>
             );
           })}
@@ -66,7 +66,7 @@ const Hero = (props: Props) => {
         </Marquee>
       </div>
 
-      <div className="rotate-[-4deg] w-[100vw] mb-20 mt-10">
+      <div className="rotate-[-4deg] w-[100vw] mb-10 md:mb-20 mt-6">
         <Marquee direction="right" pauseOnHover={true}>
           {Object.keys(personalProjects).map((key, index) => {
             const item = personalProjects[key as keyof typeof personalProjects];

@@ -77,3 +77,20 @@ body {
 ::-webkit-scrollbar-corner {
   background: transparent !important;
 }
+
+.slick-dots li button::before {
+  font-size: 1rem;
+  color: White !important;
+}
+
+.slick-dots li button:before {
+  color: white !important;
+}
+
+.slick-prev::before {
+  font-size: 2rem;
+}
+
+.slick-next::before {
+  font-size: 2rem;
+}
