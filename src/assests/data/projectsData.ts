@@ -51,6 +51,15 @@ export const personalProjects: ProjectsObjectType = {
 
     chainintract: {
         name: "ChainIntract: Seamlessly Interact with Blockchain Smart Contracts",
+        des: "Welcome to my portfolio! This website showcases my skills and projects as a Full Stack Blockchain Developer.",
+        demo: "https://abhithory.vercel.app/",
+        github: "https://github.com/abhithory/abhi-thory",
+        image: "/images/projects/abhi-thory.png",
+        skills: [allSkills.nextjs, allSkills.typescript, allSkills.nodejs, allSkills.tailwindcss, allSkills.etherjs],
+        type: ProjectType.Personal
+    },
+    portfoilio: {
+        name: "Abhishek Thory's Portfolio",
         des: "Welcome to ChainIntract, your platform for interacting with blockchain smart contracts effortlessly! This project allows you to dynamically interact with Ethereum-based smart contracts, explore their functions, and execute transactions with ease.",
         demo: "https://chain-intract.vercel.app/",
         github: "https://github.com/abhithory/chain-intract",
