@@ -33,7 +33,7 @@ const Hero = (props: Props) => {
 
 
   return (
-    <div className="">
+    <div>
       <h1 className="font-Monserrat text_heading_size font-bold text-center py-5  sm:mt-20 mt-10">
         <span className="text-primary">Abhishek Thory</span> <br />
         Full Stack Developer
@@ -51,7 +51,6 @@ const Hero = (props: Props) => {
               </div>
             );
           })}
-
         </Marquee>
       </div>
 
