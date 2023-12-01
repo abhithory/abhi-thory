@@ -2,6 +2,8 @@ import { ProjectsObjectType } from '@/assests/data/projectsData'
 import React from 'react'
 import CarouselContainer from '../CarouselContainer';
 import ProjectCard from '../Cards/ProjectCard';
+import { Chip } from '@nextui-org/react';
+import { FaReact } from 'react-icons/fa';
 
 type Props = {
     projects: ProjectsObjectType;
@@ -19,7 +21,9 @@ export default function ProjectsCarousel({ projects, heading, carouselSettings }
                 {Object.keys(projects).map((key, index) => {
                     const item = projects[key as keyof typeof projects];
                     return (
-                        <ProjectCard projectDetail={item} classNames='mx-auto' key={index} />
+                        <div className="mx-auto" key={index} >
+                            <ProjectCard projectDetail={item} classNames='mx-auto' key={index} />
+                        </div>
                     );
                 })}
             </CarouselContainer>

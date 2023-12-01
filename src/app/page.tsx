@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <main>
-      <div className="banner" id='hello'>
+      <div className="hello-section" id='hello'>
         <Navigation />
         <Hero />
       </div>

@@ -23,17 +23,17 @@ body {
   scroll-behavior: smooth;
 }
 
-.banner {
+.hello-section {
   width: 100vw;
   min-height: 100vh;
-  background-image: url("https://pixner.net/aikeu/assets/images/banner/banner-one-bg.png");
+  background-image: url("/assets/banner-bg.png");
   background-position: center center;
   background-size: cover;
   overflow: hidden;
   z-index: 1;
 }
 
-.banner::before {
+.hello-section::before {
   position: absolute;
   top: 0px;
   left: 0;
@@ -46,7 +46,7 @@ body {
   filter: blur(227px);
   pointer-events: none;
 }
-.banner::after {
+.hello-section::after {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -61,11 +61,11 @@ body {
   pointer-events: none;
 }
 @media screen and (max-width: 760px) {
-  .banner::before {
+  .hello-section::before {
     width: 250px;
     height: 250px;
   }
-  .banner::after {
+  .hello-section::after {
     width: 230px;
     height: 230px;
   }
@@ -203,13 +203,11 @@ body {
   /* backgounds */
 
   .glassmorphism-bg {
-    /* @apply  shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur; */
     @apply bg-primary-bg/40 shadow-lg backdrop-blur-lg;
   }
 
   .glassmorphism-box {
     @apply rounded-xl border border-gray-200 bg-white/20  backdrop-blur p-5;
-    /* @apply rounded-xl border border-gray-200 bg-white/20 shadow-[inset_10px_-50px_94px_0_rgb(199, 199, 199, 0.2)] backdrop-blur p-5; */
   }
 }
 
