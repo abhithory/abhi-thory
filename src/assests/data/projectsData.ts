@@ -3,15 +3,28 @@ export enum ProjectType {
     Freelance = "Freelance",
     OpenSource = "OpenSource"
 }
-export const personalProjects = {
+
+export type ProjectDataType = {
+    name: string;
+    des: string;
+    demo: string;
+    github: string;
+    image: string;
+    skills: string[];
+    type: ProjectType
+}
+
+export type ProjectsObjectType = {
+    [index: string]: ProjectDataType
+}
+export const personalProjects: ProjectsObjectType = {
     authCertificate: {
         name: "Certificate Generation and Verification System",
         des: "The Certificate Generation and Verification System is a web application that allows users to create, download, and share digital certificates. The system ensures the authenticity of the certificates through a verification process. Users can generate certificates, download them in PDF format, and share them on social media platforms.",
         demo: " https://auth-certficates.vercel.app/",
         github: "https://github.com/abhithory/auth-certficates",
         image: "/images/projects/auth-certificate.png",
-        video: "",
-        skills: "Nextjs",
+        skills: ["Nextjs"],
         type: ProjectType.Personal
     },
     chesschain: {
@@ -20,7 +33,7 @@ export const personalProjects = {
         demo: "https://chess-chain.vercel.app/",
         github: "https://github.com/abhithory/chess-chain",
         image: "/images/projects/chess-chain.png",
-        video: "https://private-user-images.githubusercontent.com/76877003/250720833-06d8894b-b80e-4b20-bcf7-e3c43280ee9c.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDExNTcyMzQsIm5iZiI6MTcwMTE1NjkzNCwicGF0aCI6Ii83Njg3NzAwMy8yNTA3MjA4MzMtMDZkODg5NGItYjgwZS00YjIwLWJjZjctZTNjNDMyODBlZTljLm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFJV05KWUFYNENTVkVINTNBJTJGMjAyMzExMjglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMxMTI4VDA3MzUzNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTY3MTdmOGRkN2VhOTQ1NjlhOTViZjRlYTMyMmFjNmFiYjE2N2FmNzhmYjFkOTQ4MjIyMDAxZjRiZTE2NjE3ZDcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.HQXNhncvgibaCAvwNlr9rbuyxoCmjK0mw8N5KPN2gUU",
+        skills: ["Nextjs"],
         type: ProjectType.Personal
 
     },
@@ -30,8 +43,7 @@ export const personalProjects = {
         demo: "https://data-vault-project.vercel.app/",
         github: "https://github.com/abhithory/auth-certficates",
         image: "/images/projects/data-vault.png",
-        video: "https://private-user-images.githubusercontent.com/76877003/255775856-d28eecda-4ffd-4b26-b126-ea145a411406.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDExNTcyODgsIm5iZiI6MTcwMTE1Njk4OCwicGF0aCI6Ii83Njg3NzAwMy8yNTU3NzU4NTYtZDI4ZWVjZGEtNGZmZC00YjI2LWIxMjYtZWExNDVhNDExNDA2Lm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFJV05KWUFYNENTVkVINTNBJTJGMjAyMzExMjglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMxMTI4VDA3MzYyOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTM5YWU0YzY3Mjg1YTc3Zjc3ODU1NTU1MzQyY2M3NDFjODhiMTZhNGM3MGNlNzhhZTc2NDMzNTU4MTk0OWMyYTkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.-wf64t5LGu_6YrsYg9x7dweSI2-YxyaJGZwbSKp60bs"
-        ,
+        skills: ["Nextjs"],
         type: ProjectType.Personal
     },
 
@@ -41,7 +53,7 @@ export const personalProjects = {
         demo: "https://chain-intract.vercel.app/",
         github: "https://github.com/abhithory/chain-intract",
         image: "/images/projects/chain-intract.png",
-        video: "",
+        skills: ["Nextjs"],
         type: ProjectType.Personal
     },
     tubecowork: {
@@ -50,18 +62,19 @@ export const personalProjects = {
         demo: "https://github.com/TubeCowork/tubecowork-project",
         github: "https://github.com/TubeCowork/tubecowork-project",
         image: "/images/projects/tube-cowork.png",
-        video: "",
+        skills: ["Nextjs"],
         type: ProjectType.Personal
     },
 }
 
-export const opensourceProjects = {
+export const opensourceProjects: ProjectsObjectType = {
     twenty: {
         name: "Twenty",
         des: "A Modern Open Source CRM. CRM flexibility, tailored to your unique business needs",
         demo: "https://github.com/twentyhq/twenty/commits?author=abhithory",
         github: "https://github.com/twentyhq/twenty/commits?author=abhithory",
         image: "/images/projects/twenty.png",
+        skills: ["Nextjs"],
         type: ProjectType.OpenSource
     },
     agentgpt: {
@@ -70,18 +83,20 @@ export const opensourceProjects = {
         demo: "https://github.com/reworkd/AgentGPT/commits?author=abhithory",
         github: "https://github.com/reworkd/AgentGPT/commits?author=abhithory",
         image: "/images/projects/agentgpt.png",
+        skills: ["Nextjs"],
         type: ProjectType.OpenSource
     },
 }
 
 
-export const freelanceProjects = {
+export const freelanceProjects: ProjectsObjectType = {
     guerdonVictor: {
         name: "Guerdon Victor: PvP NFT Combat Game",
         des: "It's is one of the best skill based PvP NFT Combat Game based on new reward model K2E (Kill-to-Earn) which captures the essence of classic games like Tekken and Mortal Kombat. It is built on Binance Smart Chain Network and is developed in Unreal Engine. Here you can earn rewards based on your strategy, intellectual gameplay, and proper engagement. The game has made quite a fresh entry into the NFT gaming zone. The main idea behind the game development is entertainment and involvement of the gamers. To provide the gamers with the best combat gaming experiences, there will be new features added to the game periodically. So the players can remain engaged, and the game becomes even more interesting.",
         demo: "https://guerdon-victor-omega.vercel.app/",
         github: "https://github.com/abhithory/guerdonVictor",
         image: "/images/projects/guerdon-victor.png",
+        skills: ["Nextjs"],
         type: ProjectType.Freelance
     },
     sharkboyfightclub: {
@@ -90,6 +105,7 @@ export const freelanceProjects = {
         demo: "https://sharkboyfightclub.com/",
         github: "https://sharkboyfightclub.com/",
         image: "/images/projects/sharkboy.png",
+        skills: ["Nextjs"],
         type: ProjectType.Freelance
     },
     jetpackcat: {
@@ -98,6 +114,7 @@ export const freelanceProjects = {
         demo: "https://www.jetpackcat.io/",
         github: "https://www.jetpackcat.io/",
         image: "/images/projects/jectpackcat.png",
+        skills: ["Nextjs"],
         type: ProjectType.Freelance
     },
     donpepe: {
@@ -106,6 +123,7 @@ export const freelanceProjects = {
         demo: "https://pepe-coin.vercel.app/",
         github: "https://github.com/abhithory/pepe-coin",
         image: "/images/projects/donpepe.png",
+        skills: ["Nextjs"],
         type: ProjectType.Freelance
     },
 }
