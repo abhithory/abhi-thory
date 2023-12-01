@@ -18,7 +18,7 @@ export const Abhi = (props: Props) => {
           alt=""
           width={300}
           height={300}
-          className=" mx-2 grayscale  h-[300px] md:h-[360px] xl:h-[400px] object-contain cursor-pointer border-secondary border-4 rounded-2xl  transition-transform hover:scale-105 hover:grayscale-0"
+          className=" mx-2 grayscale  h-[300px] md:h-[360px] xl:h-[400px] object-contain cursor-pointerrounded-2xl  transition-transform hover:scale-105 hover:grayscale-0"
         />
       );
     }

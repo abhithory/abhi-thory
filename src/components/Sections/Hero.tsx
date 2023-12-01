@@ -8,10 +8,9 @@ import Marquee from "react-fast-marquee";
 
 type Props = {};
 
-const Hero = ({ }: Props) => {
-  const { renderSocialMediaLinks } = useSocialMediaLinks();
-  const { allSkills } = useSkills();
 
+export const HelloDetails = () => {
+  const { renderSocialMediaLinks } = useSocialMediaLinks();
   return (
     <div>
       <h1 className="font-Monserrat text_heading_size font-bold text-center py-5  sm:mt-20 mt-10">
@@ -21,6 +20,16 @@ const Hero = ({ }: Props) => {
       <div className="flex gap-5 justify-center items-center text-2xl sm:text-3xl xl:text-4xl 2xl:text-5xl">
         {renderSocialMediaLinks()}
       </div>
+    </div>
+  )
+}
+
+const Hero = ({ }: Props) => {
+  const { allSkills } = useSkills();
+
+  return (
+    <div>
+      <HelloDetails />
       <div className="rotate-[-4deg] w-[100vw] mt-10 md:mt-20 ">
         <Marquee pauseOnHover={true}>
           {Object.keys(allSkills).map((key, index) => {
