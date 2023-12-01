@@ -4,6 +4,8 @@
 
 ### Website Link: [https://abhithory.vercel.app/](https://abhithory.vercel.app/)
 
+![abhi-thory](https://github.com/abhithory/abhi-thory/assets/76877003/350165dc-ac97-4564-866e-3e085bcdfce2)
+
 ## Technologies Used
 
 - **Next.js:** The React framework for building fast and scalable applications.
