@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary: #f52041;
+  --secondary: #190737;
+  --third: #801beb;
+  --background: #130f23;
+}
+
 body {
   background: #030015 !important;
   font-weight: 400;
@@ -35,7 +42,7 @@ body {
   height: 500px;
   min-height: 300px;
   border-radius: 50%;
-  background: rgba(75, 255, 223, 0.24);
+  background: rgba(75, 169, 255, 0.44);
   filter: blur(227px);
   pointer-events: none;
 }
@@ -93,4 +100,142 @@ body {
 
 .slick-next::before {
   font-size: 2rem;
+}
+
+@layer base {
+  .page_main {
+    /* @apply h-full w-full min-h-[90vh] */
+    @apply h-full w-full min-h-[88vh];
+  }
+
+  .page_section {
+    @apply h-full w-full;
+  }
+
+  .flex_center {
+    @apply flex justify-center items-center;
+  }
+
+  /* buttonsss */
+  .btn_primary_1 {
+    @apply text-text-color bg-primary hover:bg-primary-hover border-2 border-primary rounded-xl  text-center inline-flex items-center transition-colors  
+    text-sm px-4 py-2 gap-1
+    md:text-base md:px-6 md:py-2.5 md:gap-1.5
+    xl:text-xl xl:px-8 xl:py-3 xl:gap-2;
+  }
+
+  .btn_primary_2 {
+    @apply text-text-color bg-transparent hover:border-primary-hover border-2 border-primary rounded-xl  text-center inline-flex items-center transition-colors
+    text-sm px-4 py-2 gap-1
+    md:text-base md:px-6 md:py-2.5 md:gap-1.5
+    xl:text-xl xl:px-8 xl:py-3 xl:gap-2;
+  }
+
+  .btn_secondary {
+    @apply text-text-color bg-highlight border-2 border-highlight rounded-xl  text-center inline-flex items-center transition-colors
+    text-sm px-4 py-2 gap-1
+    md:text-base md:px-6 md:py-2.5 md:gap-1.5
+    xl:text-xl xl:px-8 xl:py-3 xl:gap-2;
+  }
+
+  .btn_secondary_2 {
+    @apply text-text-color bg-transparent hover:bg-highlight border-2 border-highlight rounded-xl  text-center inline-flex items-center transition-colors
+    text-sm px-4 py-2 gap-1
+    md:text-base md:px-6 md:py-2.5 md:gap-1.5
+    xl:text-xl xl:px-8 xl:py-3 xl:gap-2;
+  }
+
+  .btn_sidebar {
+    @apply text-text-color bg-transparent hover:bg-primary-hover rounded-md text-base px-6 py-2 text-center inline-flex items-center gap-2 transition-colors w-full;
+  }
+
+  .btn_sidebar_active {
+    @apply text-text-color bg-primary-hover rounded-md text-base px-6 py-2 text-center inline-flex items-center gap-2 transition-colors w-full;
+  }
+
+  .btn_secondary_1 {
+    @apply text-text-color bg-secondary hover:bg-secondary-hover border-secondary border-2 rounded-xl text-xl px-8 py-3 text-center inline-flex items-center gap-2;
+  }
+
+  /* text gradient color ========= */
+
+  .text_big_heading_size {
+    @apply xl:text-9xl lg:text-8xl md:text-7xl text-[2.7rem];
+  }
+
+  .text_heading_size {
+    @apply xl:text-7xl 2xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl text-4xl;
+  }
+
+  .text_sub_heading_size {
+    @apply md:text-3xl text-xl;
+  }
+
+  .text_primary_gradient {
+    @apply font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary to-secondary;
+  }
+
+  .text_primary_gradient_2 {
+    @apply font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-secondary via-primary to-primary;
+  }
+
+  .text_highlight_gradient {
+    @apply font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-primary to-orange-400;
+  }
+
+  .input_1 {
+    @apply bg-primary-bg border border-primary text-text-color rounded-lg block w-full
+    text-sm px-3 py-2.5 gap-1
+    md:text-base md:px-4 md:py-3 md:gap-1.5
+    xl:text-xl xl:px-6 xl:py-3 xl:gap-2;
+  }
+
+  /* gradient colors */
+
+  .primary_gradient {
+    @apply bg-gradient-to-r from-amber-500 via-primary to-yellow-500 bg-clip-text text-transparent;
+  }
+
+  .secondary_gradient {
+    @apply bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent;
+  }
+
+  /* backgounds */
+
+  .glassmorphism-bg {
+    /* @apply  shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur; */
+    @apply bg-primary-bg/40 shadow-lg backdrop-blur-lg;
+  }
+
+  .glassmorphism-box {
+    @apply rounded-xl border border-gray-200 bg-white/20  backdrop-blur p-5;
+    /* @apply rounded-xl border border-gray-200 bg-white/20 shadow-[inset_10px_-50px_94px_0_rgb(199, 199, 199, 0.2)] backdrop-blur p-5; */
+  }
+}
+
+.animate_charcter {
+  /* text-transform: uppercase; */
+  background-image: linear-gradient(
+    -90deg,
+    #270898 0%,
+    #801beb 29%,
+    var(--primary) 67%,
+    #270898 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 6s linear infinite;
+  display: inline-block;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
 }

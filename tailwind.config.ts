@@ -15,6 +15,7 @@ const config: Config = {
         primary: "#f52041", //64FF4B F53250
         secondary: "#190737",
         background: "#130f23",
+        third: "#801beb",
         divider: "#ffffff32",
         white: "#ffff",
         black: "#000",

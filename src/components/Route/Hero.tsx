@@ -34,7 +34,7 @@ const Hero = (props: Props) => {
 
   return (
     <div className="">
-      <h1 className="font-Monserrat text-4xl py-5 xl:text-7xl 2xl:text-8xl font-[700] text-center xl:leading-[80px] 2xl:leading-[100px] sm:mt-20">
+      <h1 className="font-Monserrat text_heading_size font-bold text-center py-5  sm:mt-20 mt-10">
         <span className="text-primary">Abhishek Thory</span> <br />
         Full Stack Developer
       </h1>

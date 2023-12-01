@@ -11,8 +11,8 @@ type Props = {
 
 export default function ProjectsCarousel({ projects, heading, carouselSettings }: Props) {
     return (
-        <div className="w-[100%] md:w-[90%] 2xl:w-[85%] mx-auto my-12">
-            <h1 className={` p-2 font-Monserrat`}>
+        <div className="w-[98%] md:w-[90%] 2xl:w-[85%] mx-auto my-12">
+            <h1 className={`animate_charcter p-2 font-Monserrat text_sub_heading_size font-semibold `}>
                 {heading}
             </h1>
             <CarouselContainer settings={carouselSettings}>
