@@ -1,7 +1,4 @@
-import Link from 'next/link'
 import React from 'react'
-import { FaEnvelope, FaGithub, FaLinkedin, FaTwitter, FaWhatsapp, FaYoutube } from "react-icons/fa";
-import Image from "next/image";
 import { HelloDetails } from '@/components/Sections/Hero';
 
 

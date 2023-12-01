@@ -30,7 +30,7 @@ export default function useSocialMediaLinks() {
             icon: <FaWhatsapp />
         },
         email: {
-            link: "mailto:your.email@example.com", // Replace with your email address
+            link: "mailto:abhishekthory001@gmail.com", // Replace with your email address
             icon: <FaEnvelope />
         }
     };
