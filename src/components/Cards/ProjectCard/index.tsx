@@ -46,14 +46,17 @@ export default function ProjectCard({ projectDetail, classNames }: ProjectCardPr
 
             <Divider className="bg-[#ffffff18] my-3" />
             <div className="flex justify-between px-4 w-full">
-                <Button isIconOnly color="primary" variant="bordered">
-                    <FaGithub />
-                </Button>
-                <Button color="primary" variant="bordered">
-                    <Link href={`/prompt/`} className="w-full">
+                <Link href={projectDetail.github} target="_blank">
+                    <Button isIconOnly color="primary" variant="bordered">
+                        <FaGithub />
+                    </Button>
+                </Link>
+                <Link href={projectDetail.demo} target="_blank">
+
+                    <Button color="primary" variant="bordered" href={projectDetail.demo}>
                         Demo
-                    </Link>
-                </Button>
+                    </Button>
+                </Link>
             </div>
 
         </div>

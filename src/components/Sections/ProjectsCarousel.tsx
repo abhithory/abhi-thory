@@ -2,8 +2,6 @@ import { ProjectsObjectType } from '@/assests/data/projectsData'
 import React from 'react'
 import CarouselContainer from '../CarouselContainer';
 import ProjectCard from '../Cards/ProjectCard';
-import { Chip } from '@nextui-org/react';
-import { FaReact } from 'react-icons/fa';
 
 type Props = {
     projects: ProjectsObjectType;

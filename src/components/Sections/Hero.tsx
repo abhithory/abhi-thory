@@ -1,7 +1,4 @@
-"use client";
 import useSocialMediaLinks from "@/hooks/useSocialMediaLinks";
-import Image from "next/image";
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import ProjectCard from "../Cards/ProjectCard";
 import { personalProjects } from "@/assests/data/projectsData";
@@ -11,26 +8,9 @@ import Marquee from "react-fast-marquee";
 
 type Props = {};
 
-
-
-const Hero = (props: Props) => {
-  const [mounted, setmounted] = useState(false);
-
+const Hero = ({ }: Props) => {
   const { renderSocialMediaLinks } = useSocialMediaLinks();
   const { allSkills } = useSkills();
-
-
-  useEffect(() => {
-    if (!mounted) {
-      setmounted(true);
-    }
-  }, [mounted]);
-
-  if (!mounted) {
-    return null;
-  }
-
-
 
   return (
     <div>

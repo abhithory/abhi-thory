@@ -1,5 +1,7 @@
 - lodading
 - links page
+- add animation with framer motion
+- navigatioin style change (add quoute with animation // graphic)
 - image loading
 - light/dark mode
 - all cards hight same. and card fully responsive

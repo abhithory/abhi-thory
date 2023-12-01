@@ -7,6 +7,7 @@ import { freelanceProjects, opensourceProjects, personalProjects } from '@/asses
 import Reviews from '@/components/Sections/Reviews'
 import ProjectsCarousel from '@/components/Sections/ProjectsCarousel'
 import Navigation from '@/components/Navigation/Navigation'
+import { Abhi } from '@/components/Sections/Abhi'
 
 
 export default function Home() {
@@ -19,13 +20,14 @@ export default function Home() {
         <Navigation />
         <Hero />
       </div>
+      <Reviews />
 
       <ProjectsCarousel projects={personalProjects} heading='Personal Projects' />
       <ProjectsCarousel projects={freelanceProjects} heading='Freelance Projects (60+ Overall)' />
       <ProjectsCarousel projects={opensourceProjects} heading='Opensource Projects' carouselSettings={{ slidesToScroll: 1, slidesToShow: 2, }} />
 
       <Divider className="bg-divider" />
-      <Reviews />
+      <Abhi />
       <Footer />
     </main >
   )

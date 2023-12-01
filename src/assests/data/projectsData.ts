@@ -122,7 +122,7 @@ export const freelanceProjects: ProjectsObjectType = {
     donpepe: {
         name: "DonPepe: New crypto token",
         des: "Don Pepe is a new crypto token that is based on the famous meme coin Pepe. The project aims to create the first meme coin with an AI-powered exchange system. This exchange system will make it easier and more secure for people to buy, sell, and trade cryptocurrencies. The Don Pepe token will be used to power the exchange system and will also be used to reward users for participating in the community.",
-        demo: "https://pepe-coin.vercel.app/",
+        demo: "https://www.donpepe-ai.com/",
         github: "https://github.com/abhithory/pepe-coin",
         image: "/images/projects/donpepe.png",
         skills: [allSkills.nextjs, allSkills.typescript, allSkills.nodejs, allSkills.tailwindcss, allSkills.etherjs, allSkills.solidity],

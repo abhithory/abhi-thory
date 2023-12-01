@@ -1,4 +1,3 @@
-'use client'
 import { styles } from "@/styles/styles";
 import Image from "next/image";
 import React from "react";
