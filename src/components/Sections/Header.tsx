@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import Navigation from "./Navigation";
+import Navigation from "../Navigation/Navigation";
 
 type Props = {
   activeItem: number;

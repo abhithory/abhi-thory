@@ -10,7 +10,7 @@ export default function CarouselContainer({ children, settings }: Props) {
 
     const config = {
         dots: true,
-        className: "center",
+        // className: "center",
         infinite: true,
         speed: 500,
         autoplay: true,
@@ -54,7 +54,7 @@ export default function CarouselContainer({ children, settings }: Props) {
 
 
     return (
-        <Slider {...config}  >
+        <Slider {...config} >
             {children}
         </Slider>
     )

@@ -15,7 +15,7 @@ export default function ProjectsCarousel({ projects, heading, carouselSettings }
             <h1 className={`animate_charcter p-2 font-Monserrat text_sub_heading_size font-semibold `}>
                 {heading}
             </h1>
-            <CarouselContainer settings={carouselSettings}>
+            <CarouselContainer settings={carouselSettings} >
                 {Object.keys(projects).map((key, index) => {
                     const item = projects[key as keyof typeof projects];
                     return (

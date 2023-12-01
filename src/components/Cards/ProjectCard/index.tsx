@@ -1,23 +1,12 @@
 import React from "react";
 import { Card, CardBody, Image, Button, Slider, Divider, Avatar, Link, Chip, CardFooter, ScrollShadow } from "@nextui-org/react";
 import { styles } from "@/styles/styles";
-import { FaConnectdevelop, FaGithub, FaNodeJs } from "react-icons/fa";
-import { GrGithub } from "react-icons/gr";
-import { TbBrandNextjs, TbBrandTailwind, TbBrandTypescript } from "react-icons/tb";
-import { BiLogoTypescript } from "react-icons/bi";
-import { SiSolidity } from "react-icons/si";
+import { FaGithub } from "react-icons/fa";
+import { ProjectDataType } from "@/assests/data/projectsData";
 
-type ProjectData = {
-    name: string;
-    des: string;
-    demo: string;
-    github: string;
-    image: string;
-    video?: string;
-}
 
 type ProjectCardProps = {
-    projectDetail: ProjectData;
+    projectDetail: ProjectDataType;
     classNames?: string;
 }
 
@@ -47,11 +36,12 @@ export default function ProjectCard({ projectDetail, classNames }: ProjectCardPr
 
             <Divider className="bg-[#ffffff18] my-3" />
             <div className="flex gap-2 flex-wrap">
-                <Chip color="warning" variant="solid" radius="md" startContent={<TbBrandNextjs />}>Nextjs</Chip>
-                <Chip color="warning" variant="solid" radius="md" startContent={<BiLogoTypescript />}>Typescript</Chip>
-                <Chip color="warning" variant="solid" radius="md" startContent={<TbBrandTailwind />}>TailwindCss</Chip>
-                <Chip color="warning" variant="solid" radius="md" startContent={<SiSolidity />}>Solidity</Chip>
-                <Chip color="warning" variant="solid" radius="md" startContent={<FaNodeJs />}>Nodejs</Chip>
+
+                {projectDetail.skills?.map((skill, index) => {
+                    return (
+                        <Chip key={index} color="warning" variant="solid" radius="md" startContent={skill.icon}>{skill.name}</Chip>
+                    )
+                })}
             </div>
 
             <Divider className="bg-[#ffffff18] my-3" />

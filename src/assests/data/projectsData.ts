@@ -1,3 +1,5 @@
+import { OneSkillObjectType, allSkills } from "@/hooks/useSkills";
+
 export enum ProjectType {
     Personal = "Personal",
     Freelance = "Freelance",
@@ -10,7 +12,7 @@ export type ProjectDataType = {
     demo: string;
     github: string;
     image: string;
-    skills: string[];
+    skills: OneSkillObjectType[];
     type: ProjectType
 }
 
@@ -24,7 +26,7 @@ export const personalProjects: ProjectsObjectType = {
         demo: " https://auth-certficates.vercel.app/",
         github: "https://github.com/abhithory/auth-certficates",
         image: "/images/projects/auth-certificate.png",
-        skills: ["Nextjs"],
+        skills: [allSkills.nextjs, allSkills.typescript, allSkills.nodejs, allSkills.tailwindcss, allSkills.etherjs, allSkills.solidity],
         type: ProjectType.Personal
     },
     chesschain: {
@@ -33,7 +35,7 @@ export const personalProjects: ProjectsObjectType = {
         demo: "https://chess-chain.vercel.app/",
         github: "https://github.com/abhithory/chess-chain",
         image: "/images/projects/chess-chain.png",
-        skills: ["Nextjs"],
+        skills: [allSkills.nextjs, allSkills.typescript, allSkills.nodejs, allSkills.tailwindcss, allSkills.etherjs, allSkills.solidity, allSkills.hardhat],
         type: ProjectType.Personal
 
     },
@@ -43,7 +45,7 @@ export const personalProjects: ProjectsObjectType = {
         demo: "https://data-vault-project.vercel.app/",
         github: "https://github.com/abhithory/auth-certficates",
         image: "/images/projects/data-vault.png",
-        skills: ["Nextjs"],
+        skills: [allSkills.nextjs, allSkills.typescript, allSkills.nodejs, allSkills.tailwindcss, allSkills.etherjs, allSkills.solidity, allSkills.hardhat],
         type: ProjectType.Personal
     },
 
@@ -53,7 +55,7 @@ export const personalProjects: ProjectsObjectType = {
         demo: "https://chain-intract.vercel.app/",
         github: "https://github.com/abhithory/chain-intract",
         image: "/images/projects/chain-intract.png",
-        skills: ["Nextjs"],
+        skills: [allSkills.nextjs, allSkills.typescript, allSkills.nodejs, allSkills.tailwindcss, allSkills.etherjs],
         type: ProjectType.Personal
     },
     tubecowork: {
@@ -62,7 +64,7 @@ export const personalProjects: ProjectsObjectType = {
         demo: "https://github.com/TubeCowork/tubecowork-project",
         github: "https://github.com/TubeCowork/tubecowork-project",
         image: "/images/projects/tube-cowork.png",
-        skills: ["Nextjs"],
+        skills: [allSkills.nextjs, allSkills.typescript, allSkills.nodejs, allSkills.tailwindcss],
         type: ProjectType.Personal
     },
 }
@@ -74,7 +76,7 @@ export const opensourceProjects: ProjectsObjectType = {
         demo: "https://github.com/twentyhq/twenty/commits?author=abhithory",
         github: "https://github.com/twentyhq/twenty/commits?author=abhithory",
         image: "/images/projects/twenty.png",
-        skills: ["Nextjs"],
+        skills: [allSkills.reactjs, allSkills.typescript, allSkills.nodejs, allSkills.nestjs],
         type: ProjectType.OpenSource
     },
     agentgpt: {
@@ -83,7 +85,7 @@ export const opensourceProjects: ProjectsObjectType = {
         demo: "https://github.com/reworkd/AgentGPT/commits?author=abhithory",
         github: "https://github.com/reworkd/AgentGPT/commits?author=abhithory",
         image: "/images/projects/agentgpt.png",
-        skills: ["Nextjs"],
+        skills: [allSkills.nextjs, allSkills.typescript, allSkills.nodejs, allSkills.tailwindcss],
         type: ProjectType.OpenSource
     },
 }
@@ -96,7 +98,7 @@ export const freelanceProjects: ProjectsObjectType = {
         demo: "https://guerdon-victor-omega.vercel.app/",
         github: "https://github.com/abhithory/guerdonVictor",
         image: "/images/projects/guerdon-victor.png",
-        skills: ["Nextjs"],
+        skills: [allSkills.reactjs, allSkills.javascript, allSkills.nodejs, allSkills.sass, allSkills.etherjs, allSkills.solidity, allSkills.hardhat],
         type: ProjectType.Freelance
     },
     sharkboyfightclub: {
@@ -105,7 +107,7 @@ export const freelanceProjects: ProjectsObjectType = {
         demo: "https://sharkboyfightclub.com/",
         github: "https://sharkboyfightclub.com/",
         image: "/images/projects/sharkboy.png",
-        skills: ["Nextjs"],
+        skills: [allSkills.reactjs, allSkills.typescript, allSkills.nodejs, allSkills.sass, allSkills.etherjs, allSkills.solidity, allSkills.hardhat],
         type: ProjectType.Freelance
     },
     jetpackcat: {
@@ -114,7 +116,7 @@ export const freelanceProjects: ProjectsObjectType = {
         demo: "https://www.jetpackcat.io/",
         github: "https://www.jetpackcat.io/",
         image: "/images/projects/jectpackcat.png",
-        skills: ["Nextjs"],
+        skills: [allSkills.reactjs, allSkills.typescript, allSkills.nodejs, allSkills.sass, allSkills.etherjs, allSkills.solidity, allSkills.hardhat],
         type: ProjectType.Freelance
     },
     donpepe: {
@@ -123,7 +125,7 @@ export const freelanceProjects: ProjectsObjectType = {
         demo: "https://pepe-coin.vercel.app/",
         github: "https://github.com/abhithory/pepe-coin",
         image: "/images/projects/donpepe.png",
-        skills: ["Nextjs"],
+        skills: [allSkills.nextjs, allSkills.typescript, allSkills.nodejs, allSkills.tailwindcss, allSkills.etherjs, allSkills.solidity],
         type: ProjectType.Freelance
     },
 }

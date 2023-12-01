@@ -1,0 +1,5 @@
+- lodading
+- links page
+- image loading
+- light/dark mode
+- all cards hight same. and card fully responsive

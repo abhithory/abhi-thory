@@ -41,18 +41,7 @@ const Hero = (props: Props) => {
       <div className="flex gap-5 justify-center items-center text-2xl sm:text-3xl xl:text-4xl 2xl:text-5xl">
         {renderSocialMediaLinks()}
       </div>
-      {/* <div className="md:mt-5">
-          <Image
-            src={"/assets/line.png"}
-            alt=""
-            className="absolute  md:block"
-            width={2000}
-            height={2}
-          />
-        </div> */}
-
-
-      <div className="rotate-[-4deg] w-[100vw] mt-20 ">
+      <div className="rotate-[-4deg] w-[100vw] mt-10 md:mt-20 ">
         <Marquee pauseOnHover={true}>
           {Object.keys(allSkills).map((key, index) => {
             const item = allSkills[key as keyof typeof allSkills];
