@@ -44,7 +44,8 @@ const Navigation = ({}: Props) => {
         <div>
           <Link href={'/'}>
             <h1 className="cursor-pointer text-2xl font-semibold">
-              <span className="text-primary">@Abhi</span>Thory
+              <span className="text-primary">@Abhi</span>
+              Thory
             </h1>
           </Link>
         </div>

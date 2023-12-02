@@ -6,7 +6,10 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import '@/styles/globals.css';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+});
 
 const monserrat = Montserrat({
   subsets: ['latin'],

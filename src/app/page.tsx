@@ -33,7 +33,10 @@ export default function Home() {
       <ProjectsCarousel
         projects={opensourceProjects}
         heading="Opensource Projects"
-        carouselSettings={{ slidesToScroll: 1, slidesToShow: 2 }}
+        carouselSettings={{
+          slidesToScroll: 1,
+          slidesToShow: 2,
+        }}
       />
 
       <Divider className="bg-divider" />

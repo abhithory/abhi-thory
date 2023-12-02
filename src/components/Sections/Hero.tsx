@@ -23,7 +23,7 @@ export const HelloDetails = () => {
   );
 };
 
-const Hero = ({ }: Props) => {
+const Hero = ({}: Props) => {
   const { allSkills } = useSkills();
 
   return (
