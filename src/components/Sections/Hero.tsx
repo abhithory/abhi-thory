@@ -1,5 +1,5 @@
 import useSocialMediaLinks from '@/hooks/useSocialMediaLinks';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import ProjectCard from '../Cards/ProjectCard';
 import { personalProjects } from '@/assests/data/projectsData';
 import { Chip } from '@nextui-org/react';

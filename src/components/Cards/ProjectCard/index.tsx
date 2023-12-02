@@ -1,15 +1,10 @@
 import React from 'react';
 import {
-  Card,
-  CardBody,
   Image,
   Button,
-  Slider,
   Divider,
-  Avatar,
   Link,
   Chip,
-  CardFooter,
   ScrollShadow,
 } from '@nextui-org/react';
 import { styles } from '@/styles/styles';

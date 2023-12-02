@@ -30,7 +30,7 @@ const Navigation = () => {
       <div className="flex items-center justify-between ">
         <div className="block md:flex">
           {navItems.map((item, index) => (
-            <Link key={item.title} href={item.href}>
+            <Link key={index} href={item.href}>
               <h5
                 className={`inline-block py-5 font-Inter text-2xl font-[500] text-primary md:px-4 md:py-0 xl:px-8 `}
               >

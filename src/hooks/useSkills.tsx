@@ -1,11 +1,5 @@
-import { Chip } from '@nextui-org/react';
 import React, { ReactNode } from 'react';
-import {
-  BiLogoCss3,
-  BiLogoJavascript,
-  BiLogoSass,
-  BiLogoTypescript,
-} from 'react-icons/bi';
+import { BiLogoJavascript, BiLogoSass, BiLogoTypescript } from 'react-icons/bi';
 import { FaDocker, FaEthereum, FaHardHat } from 'react-icons/fa';
 import { SiNestjs, SiSolidity } from 'react-icons/si';
 import {
