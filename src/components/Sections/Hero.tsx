@@ -8,7 +8,6 @@ import Marquee from "react-fast-marquee";
 
 type Props = {};
 
-
 export const HelloDetails = () => {
   const { renderSocialMediaLinks } = useSocialMediaLinks();
   return (
@@ -21,10 +20,10 @@ export const HelloDetails = () => {
         {renderSocialMediaLinks()}
       </div>
     </div>
-  )
-}
+  );
+};
 
-const Hero = ({ }: Props) => {
+const Hero = ({}: Props) => {
   const { allSkills } = useSkills();
 
   return (
@@ -35,22 +34,29 @@ const Hero = ({ }: Props) => {
           {Object.keys(allSkills).map((key, index) => {
             const item = allSkills[key as keyof typeof allSkills];
             return (
-              <div className="mx-2 cursor-pointer" key={index} >
-                <Chip className="text-1xl md:text-3xl p-5 md:p-8 hover:text-warning hover:border-warning" color="primary" variant="bordered" radius="md" startContent={item.icon}>{item.name}</Chip>
+              <div className="mx-2 cursor-pointer" key={index}>
+                <Chip
+                  className="text-1xl md:text-3xl p-5 md:p-8 hover:text-warning hover:border-warning"
+                  color="primary"
+                  variant="bordered"
+                  radius="md"
+                  startContent={item.icon}
+                >
+                  {item.name}
+                </Chip>
               </div>
             );
           })}
         </Marquee>
       </div>
 
-      <div className="rotate-[-4deg] w-[100vw] mb-10 md:mb-20 mt-6">
+      <div className="rotate-[-4deg]  mb-10 md:mb-20 mt-6 w-[100vw]">
         <Marquee direction="right" pauseOnHover={true}>
           {Object.keys(personalProjects).map((key, index) => {
             const item = personalProjects[key as keyof typeof personalProjects];
             return (
               <div className="mx-2" key={index}>
                 <ProjectCard projectDetail={item} />
-
               </div>
             );
           })}

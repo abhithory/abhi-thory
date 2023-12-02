@@ -1,72 +1,81 @@
-import { Chip } from '@nextui-org/react';
-import React, { ReactNode } from 'react'
-import { BiLogoCss3, BiLogoJavascript, BiLogoSass, BiLogoTypescript } from 'react-icons/bi';
-import { FaDocker, FaEthereum, FaHardHat } from 'react-icons/fa';
-import { SiNestjs, SiSolidity } from 'react-icons/si';
-import { TbBrandNextjs, TbBrandNodejs, TbBrandReact, TbBrandTailwind } from 'react-icons/tb';
+import { Chip } from "@nextui-org/react";
+import React, { ReactNode } from "react";
+import {
+  BiLogoCss3,
+  BiLogoJavascript,
+  BiLogoSass,
+  BiLogoTypescript,
+} from "react-icons/bi";
+import { FaDocker, FaEthereum, FaHardHat } from "react-icons/fa";
+import { SiNestjs, SiSolidity } from "react-icons/si";
+import {
+  TbBrandNextjs,
+  TbBrandNodejs,
+  TbBrandReact,
+  TbBrandTailwind,
+} from "react-icons/tb";
 
 export type OneSkillObjectType = {
   name: string;
-  icon: ReactNode
-}
+  icon: ReactNode;
+};
 
 export type AllSkillsObjectType = {
-  [index: string]: OneSkillObjectType
-}
+  [index: string]: OneSkillObjectType;
+};
 
 export const allSkills: AllSkillsObjectType = {
   reactjs: {
     name: "ReactJs",
-    icon: <TbBrandReact />
+    icon: <TbBrandReact />,
   },
   nextjs: {
     name: "Nextjs",
-    icon: <TbBrandNextjs />
+    icon: <TbBrandNextjs />,
   },
   nodejs: {
     name: "Nodejs",
-    icon: <TbBrandNodejs />
+    icon: <TbBrandNodejs />,
   },
   javascript: {
     name: "JavaScript",
-    icon: <BiLogoJavascript />
+    icon: <BiLogoJavascript />,
   },
   typescript: {
     name: "Typescript",
-    icon: <BiLogoTypescript />
+    icon: <BiLogoTypescript />,
   },
   nestjs: {
     name: "NestJs",
-    icon: <SiNestjs />
+    icon: <SiNestjs />,
   },
   tailwindcss: {
     name: "TailwindCss",
-    icon: <TbBrandTailwind />
+    icon: <TbBrandTailwind />,
   },
   sass: {
     name: "Sass",
-    icon: <BiLogoSass />
+    icon: <BiLogoSass />,
   },
   docker: {
     name: "Docker",
-    icon: <FaDocker />
+    icon: <FaDocker />,
   },
   solidity: {
     name: "Solidity",
-    icon: <SiSolidity />
+    icon: <SiSolidity />,
   },
   etherjs: {
     name: "Ether.Js",
-    icon: <FaEthereum />
+    icon: <FaEthereum />,
   },
   hardhat: {
     name: "Hardhat",
-    icon: <FaHardHat />
+    icon: <FaHardHat />,
   },
-
 };
 export default function useSkills() {
   return {
-    allSkills
-  }
+    allSkills,
+  };
 }

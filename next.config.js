@@ -1,10 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-        domains: ["pixner.net", ""],
-    },
-    swcMinify: true,
+  images: {
+    domains: ["pixner.net", ""],
+  },
+  swcMinify: true,
+};
 
-}
-
-module.exports = nextConfig
+module.exports = nextConfig;

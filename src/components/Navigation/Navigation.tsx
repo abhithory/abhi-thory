@@ -1,18 +1,16 @@
 import Link from "next/link";
 import React from "react";
 
-type Props = {
-};
+type Props = {};
 
 const navItems = [
   {
     title: "Hello",
     href: "#hello",
-  }
+  },
 ];
 
-const Navigation = ({ }: Props) => {
-
+const Navigation = ({}: Props) => {
   // const [active, setactive] = useState(false);
 
   // if (typeof window !== "undefined") {
@@ -25,9 +23,7 @@ const Navigation = ({ }: Props) => {
   //   });
   // }
 
-
   return (
-
     <nav
       // className={`w-full px-5 py-8 border-b min-h-[60px] border-b-[#ffffff32] transition-opacity ${active && "fixed top-0 left-0  z-[9999]"
       //   }`}

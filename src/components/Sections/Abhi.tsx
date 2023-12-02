@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 import React from "react";
 import Marquee from "react-fast-marquee";
@@ -6,7 +6,6 @@ import Marquee from "react-fast-marquee";
 type Props = {};
 
 export const Abhi = (props: Props) => {
-
   const renderReviews = () => {
     const reviews = [];
 
@@ -19,7 +18,7 @@ export const Abhi = (props: Props) => {
           width={300}
           height={300}
           className=" mx-2 grayscale  h-[300px] md:h-[360px] xl:h-[400px] object-contain cursor-pointerrounded-2xl  transition-transform hover:scale-105 hover:grayscale-0"
-        />
+        />,
       );
     }
 

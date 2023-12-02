@@ -6,7 +6,6 @@ import Marquee from "react-fast-marquee";
 type Props = {};
 
 const Reviews = (props: Props) => {
-
   const renderReviews = () => {
     const reviews = [];
 
@@ -19,7 +18,7 @@ const Reviews = (props: Props) => {
           width={400}
           height={100}
           className=" mx-2  w-[360px] md:w-[400px] xl:w-[600px] object-contain cursor-pointer border-secondary border-4 rounded-2xl  transition-transform hover:scale-105"
-        />
+        />,
       );
     }
 
