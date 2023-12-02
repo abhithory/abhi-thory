@@ -1,6 +1,6 @@
-"use client";
-import React, { ReactNode } from "react";
-import Slider from "react-slick";
+'use client';
+import React, { ReactNode } from 'react';
+import Slider from 'react-slick';
 
 type Props = {
   children: ReactNode;
@@ -10,7 +10,7 @@ type Props = {
 export default function CarouselContainer({ children, settings }: Props) {
   const config = {
     dots: true,
-    className: "center",
+    className: 'center',
     infinite: true,
     speed: 500,
     autoplay: true,
@@ -19,7 +19,7 @@ export default function CarouselContainer({ children, settings }: Props) {
     slidesToScroll: 2,
     swipeToSlide: true,
     centerMode: true,
-    centerPadding: "40px",
+    centerPadding: '40px',
     // cssEase: "linear",
     nextArrow: <></>,
     prevArrow: <></>,
@@ -42,7 +42,7 @@ export default function CarouselContainer({ children, settings }: Props) {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          centerPadding: "20px",
+          centerPadding: '20px',
         },
       },
     ],

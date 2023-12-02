@@ -1,7 +1,7 @@
-import { ProjectsObjectType } from "@/assests/data/projectsData";
-import React from "react";
-import CarouselContainer from "../CarouselContainer";
-import ProjectCard from "../Cards/ProjectCard";
+import { ProjectsObjectType } from '@/assests/data/projectsData';
+import React from 'react';
+import CarouselContainer from '../CarouselContainer';
+import ProjectCard from '../Cards/ProjectCard';
 
 type Props = {
   projects: ProjectsObjectType;
@@ -15,9 +15,9 @@ export default function ProjectsCarousel({
   carouselSettings,
 }: Props) {
   return (
-    <div className="w-[98%] md:w-[90%] 2xl:w-[85%] mx-auto my-12">
+    <div className="mx-auto my-12 w-[98%] md:w-[90%] 2xl:w-[85%]">
       <h1
-        className={`animate_charcter p-2 font-Monserrat text_sub_heading_size font-semibold `}
+        className={`animate_charcter text_sub_heading_size p-2 font-Monserrat font-semibold `}
       >
         {heading}
       </h1>

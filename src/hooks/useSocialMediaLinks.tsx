@@ -1,5 +1,5 @@
-import Link from "next/link";
-import React from "react";
+import Link from 'next/link';
+import React from 'react';
 import {
   FaEnvelope,
   FaGithub,
@@ -8,37 +8,37 @@ import {
   FaTwitter,
   FaWhatsapp,
   FaYoutube,
-} from "react-icons/fa";
+} from 'react-icons/fa';
 
 export default function useSocialMediaLinks() {
   const socialLinks = {
     telegram: {
-      link: "https://t.me/abhi_thory",
+      link: 'https://t.me/abhi_thory',
       icon: <FaTelegram />,
     },
     linkedin: {
-      link: "https://www.linkedin.com/in/abhithory/",
+      link: 'https://www.linkedin.com/in/abhithory/',
       icon: <FaLinkedin />,
     },
     github: {
-      link: "https://github.com/abhithory",
+      link: 'https://github.com/abhithory',
       icon: <FaGithub />,
     },
     twitter: {
-      link: "https://twitter.com/abhithory",
+      link: 'https://twitter.com/abhithory',
       icon: <FaTwitter />,
     },
     youtube: {
-      link: "https://www.youtube.com/@abhithory",
+      link: 'https://www.youtube.com/@abhithory',
       icon: <FaYoutube />,
     },
 
     whatsapp: {
-      link: "https://www.whatsapp.com/channel/0029VaAAtHYDTkKAYXlQjn2y",
+      link: 'https://www.whatsapp.com/channel/0029VaAAtHYDTkKAYXlQjn2y',
       icon: <FaWhatsapp />,
     },
     email: {
-      link: "mailto:abhishekthory001@gmail.com", // Replace with your email address
+      link: 'mailto:abhishekthory001@gmail.com', // Replace with your email address
       icon: <FaEnvelope />,
     },
   };
@@ -50,7 +50,7 @@ export default function useSocialMediaLinks() {
         <Link
           key={key}
           href={item.link}
-          target={key === "email" ? "_self" : "_blank"}
+          target={key === 'email' ? '_self' : '_blank'}
           className="hover:text-primary"
         >
           {item.icon}

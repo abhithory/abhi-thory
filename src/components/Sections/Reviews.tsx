@@ -1,7 +1,7 @@
-import { styles } from "@/styles/styles";
-import Image from "next/image";
-import React from "react";
-import Marquee from "react-fast-marquee";
+import { styles } from '@/styles/styles';
+import Image from 'next/image';
+import React from 'react';
+import Marquee from 'react-fast-marquee';
 
 type Props = {};
 
@@ -17,7 +17,7 @@ const Reviews = (props: Props) => {
           alt=""
           width={400}
           height={100}
-          className=" mx-2  w-[360px] md:w-[400px] xl:w-[600px] object-contain cursor-pointer border-secondary border-4 rounded-2xl  transition-transform hover:scale-105"
+          className=" mx-2  w-[360px] cursor-pointer rounded-2xl border-4 border-secondary object-contain transition-transform hover:scale-105  md:w-[400px] xl:w-[600px]"
         />,
       );
     }
@@ -27,13 +27,13 @@ const Reviews = (props: Props) => {
 
   return (
     <div className="py-4 md:py-10" id="reviews">
-      <h1 className={`${styles.heading} font-Monserrat text-center`}>
+      <h1 className={`${styles.heading} text-center font-Monserrat`}>
         Reviews
       </h1>
-      <div className="w-full flex justify-center pt-3">
-        <div className="w-[50px] h-[2px] bg-primary" />
+      <div className="flex w-full justify-center pt-3">
+        <div className="h-[2px] w-[50px] bg-primary" />
       </div>
-      <Marquee className="w-full my-10" speed={80}>
+      <Marquee className="my-10 w-full" speed={80}>
         {renderReviews()}
       </Marquee>
     </div>

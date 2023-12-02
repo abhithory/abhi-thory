@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["pixner.net", ""],
+    domains: ['pixner.net', ''],
   },
   swcMinify: true,
 };

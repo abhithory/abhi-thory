@@ -1,17 +1,17 @@
-import Footer from "@/components/Sections/Footer";
-import Hero from "@/components/Sections/Hero";
-import { Divider } from "@nextui-org/react";
+import Footer from '@/components/Sections/Footer';
+import Hero from '@/components/Sections/Hero';
+import { Divider } from '@nextui-org/react';
 
 import {
   freelanceProjects,
   opensourceProjects,
   personalProjects,
-} from "@/assests/data/projectsData";
+} from '@/assests/data/projectsData';
 
-import Reviews from "@/components/Sections/Reviews";
-import ProjectsCarousel from "@/components/Sections/ProjectsCarousel";
-import Navigation from "@/components/Navigation/Navigation";
-import { Abhi } from "@/components/Sections/Abhi";
+import Reviews from '@/components/Sections/Reviews';
+import ProjectsCarousel from '@/components/Sections/ProjectsCarousel';
+import Navigation from '@/components/Navigation/Navigation';
+import { Abhi } from '@/components/Sections/Abhi';
 
 export default function Home() {
   return (

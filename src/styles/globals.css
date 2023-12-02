@@ -26,7 +26,7 @@ body {
 .hello-section {
   width: 100vw;
   min-height: 100vh;
-  background-image: url("/assets/banner-bg.png");
+  background-image: url('/assets/banner-bg.png');
   background-position: center center;
   background-size: cover;
   overflow: hidden;
@@ -37,7 +37,7 @@ body {
   position: absolute;
   top: 0px;
   left: 0;
-  content: "";
+  content: '';
   width: 500px;
   height: 500px;
   min-height: 300px;
@@ -51,7 +51,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   right: 0;
-  content: "";
+  content: '';
   width: 430px;
   height: 430px;
   min-height: 300px;
@@ -105,7 +105,7 @@ body {
 @layer base {
   .page_main {
     /* @apply h-full w-full min-h-[90vh] */
-    @apply h-full w-full min-h-[88vh];
+    @apply h-full min-h-[88vh] w-full;
   }
 
   .page_section {
@@ -113,81 +113,81 @@ body {
   }
 
   .flex_center {
-    @apply flex justify-center items-center;
+    @apply flex items-center justify-center;
   }
 
   /* buttonsss */
   .btn_primary_1 {
-    @apply text-text-color bg-primary hover:bg-primary-hover border-2 border-primary rounded-xl  text-center inline-flex items-center transition-colors  
-    text-sm px-4 py-2 gap-1
-    md:text-base md:px-6 md:py-2.5 md:gap-1.5
-    xl:text-xl xl:px-8 xl:py-3 xl:gap-2;
+    @apply text-text-color hover:bg-primary-hover inline-flex items-center gap-1 rounded-xl  border-2 border-primary bg-primary px-4  
+    py-2 text-center text-sm transition-colors
+    md:gap-1.5 md:px-6 md:py-2.5 md:text-base
+    xl:gap-2 xl:px-8 xl:py-3 xl:text-xl;
   }
 
   .btn_primary_2 {
-    @apply text-text-color bg-transparent hover:border-primary-hover border-2 border-primary rounded-xl  text-center inline-flex items-center transition-colors
-    text-sm px-4 py-2 gap-1
-    md:text-base md:px-6 md:py-2.5 md:gap-1.5
-    xl:text-xl xl:px-8 xl:py-3 xl:gap-2;
+    @apply text-text-color hover:border-primary-hover inline-flex items-center gap-1 rounded-xl  border-2 border-primary bg-transparent px-4
+    py-2 text-center text-sm transition-colors
+    md:gap-1.5 md:px-6 md:py-2.5 md:text-base
+    xl:gap-2 xl:px-8 xl:py-3 xl:text-xl;
   }
 
   .btn_secondary {
-    @apply text-text-color bg-highlight border-2 border-highlight rounded-xl  text-center inline-flex items-center transition-colors
-    text-sm px-4 py-2 gap-1
-    md:text-base md:px-6 md:py-2.5 md:gap-1.5
-    xl:text-xl xl:px-8 xl:py-3 xl:gap-2;
+    @apply text-text-color bg-highlight border-highlight inline-flex items-center  gap-1 rounded-xl border-2 px-4
+    py-2 text-center text-sm transition-colors
+    md:gap-1.5 md:px-6 md:py-2.5 md:text-base
+    xl:gap-2 xl:px-8 xl:py-3 xl:text-xl;
   }
 
   .btn_secondary_2 {
-    @apply text-text-color bg-transparent hover:bg-highlight border-2 border-highlight rounded-xl  text-center inline-flex items-center transition-colors
-    text-sm px-4 py-2 gap-1
-    md:text-base md:px-6 md:py-2.5 md:gap-1.5
-    xl:text-xl xl:px-8 xl:py-3 xl:gap-2;
+    @apply text-text-color hover:bg-highlight border-highlight inline-flex items-center gap-1  rounded-xl border-2 bg-transparent px-4
+    py-2 text-center text-sm transition-colors
+    md:gap-1.5 md:px-6 md:py-2.5 md:text-base
+    xl:gap-2 xl:px-8 xl:py-3 xl:text-xl;
   }
 
   .btn_sidebar {
-    @apply text-text-color bg-transparent hover:bg-primary-hover rounded-md text-base px-6 py-2 text-center inline-flex items-center gap-2 transition-colors w-full;
+    @apply text-text-color hover:bg-primary-hover inline-flex w-full items-center gap-2 rounded-md bg-transparent px-6 py-2 text-center text-base transition-colors;
   }
 
   .btn_sidebar_active {
-    @apply text-text-color bg-primary-hover rounded-md text-base px-6 py-2 text-center inline-flex items-center gap-2 transition-colors w-full;
+    @apply text-text-color bg-primary-hover inline-flex w-full items-center gap-2 rounded-md px-6 py-2 text-center text-base transition-colors;
   }
 
   .btn_secondary_1 {
-    @apply text-text-color bg-secondary hover:bg-secondary-hover border-secondary border-2 rounded-xl text-xl px-8 py-3 text-center inline-flex items-center gap-2;
+    @apply text-text-color hover:bg-secondary-hover inline-flex items-center gap-2 rounded-xl border-2 border-secondary bg-secondary px-8 py-3 text-center text-xl;
   }
 
   /* text gradient color ========= */
 
   .text_big_heading_size {
-    @apply xl:text-9xl lg:text-8xl md:text-7xl text-[2.7rem];
+    @apply text-[2.7rem] md:text-7xl lg:text-8xl xl:text-9xl;
   }
 
   .text_heading_size {
-    @apply xl:text-7xl 2xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl text-4xl;
+    @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl 2xl:text-8xl;
   }
 
   .text_sub_heading_size {
-    @apply md:text-3xl text-xl;
+    @apply text-xl md:text-3xl;
   }
 
   .text_primary_gradient {
-    @apply font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary to-secondary;
+    @apply bg-gradient-to-r from-primary via-primary to-secondary bg-clip-text font-extrabold text-transparent;
   }
 
   .text_primary_gradient_2 {
-    @apply font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-secondary via-primary to-primary;
+    @apply bg-gradient-to-r from-secondary via-primary to-primary bg-clip-text font-extrabold text-transparent;
   }
 
   .text_highlight_gradient {
-    @apply font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-primary to-orange-400;
+    @apply bg-gradient-to-r from-orange-400 via-primary to-orange-400 bg-clip-text font-extrabold text-transparent;
   }
 
   .input_1 {
-    @apply bg-primary-bg border border-primary text-text-color rounded-lg block w-full
-    text-sm px-3 py-2.5 gap-1
-    md:text-base md:px-4 md:py-3 md:gap-1.5
-    xl:text-xl xl:px-6 xl:py-3 xl:gap-2;
+    @apply bg-primary-bg text-text-color block w-full gap-1 rounded-lg border
+    border-primary px-3 py-2.5 text-sm
+    md:gap-1.5 md:px-4 md:py-3 md:text-base
+    xl:gap-2 xl:px-6 xl:py-3 xl:text-xl;
   }
 
   /* gradient colors */
@@ -207,7 +207,7 @@ body {
   }
 
   .glassmorphism-box {
-    @apply rounded-xl border border-gray-200 bg-white/20  backdrop-blur p-5;
+    @apply rounded-xl border border-gray-200 bg-white/20  p-5 backdrop-blur;
   }
 }
 

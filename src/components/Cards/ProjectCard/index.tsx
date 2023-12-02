@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Card,
   CardBody,
@@ -11,10 +11,10 @@ import {
   Chip,
   CardFooter,
   ScrollShadow,
-} from "@nextui-org/react";
-import { styles } from "@/styles/styles";
-import { FaGithub } from "react-icons/fa";
-import { ProjectDataType } from "@/assests/data/projectsData";
+} from '@nextui-org/react';
+import { styles } from '@/styles/styles';
+import { FaGithub } from 'react-icons/fa';
+import { ProjectDataType } from '@/assests/data/projectsData';
 
 type ProjectCardProps = {
   projectDetail: ProjectDataType;
@@ -27,19 +27,19 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div
-      className={`border-none bg-background/60  shadow-lg overflow-hidden rounded-xl p-3 w-[320px] md:w-[400px] ${classNames}`}
+      className={`w-[320px] overflow-hidden  rounded-xl border-none bg-background/60 p-3 shadow-lg md:w-[400px] ${classNames}`}
     >
       <div className="relative">
         <Image
           src={projectDetail.image}
           alt=""
-          className="w-full !max-h-[200px] object-cover"
+          className="!max-h-[200px] w-full object-cover"
           width={390}
           height={300}
         />
       </div>
-      <div className="w-full justify-between mt-2">
-        <h3 className={`${styles.label} text-[18px] text-white h-[3.4rem]`}>
+      <div className="mt-2 w-full justify-between">
+        <h3 className={`${styles.label} h-[3.4rem] text-[18px] text-white`}>
           {projectDetail.name}
         </h3>
         <ScrollShadow hideScrollBar className="h-16">
@@ -47,8 +47,8 @@ export default function ProjectCard({
         </ScrollShadow>
       </div>
 
-      <Divider className="bg-[#ffffff18] my-3" />
-      <div className="flex gap-2 flex-wrap">
+      <Divider className="my-3 bg-[#ffffff18]" />
+      <div className="flex flex-wrap gap-2">
         {projectDetail.skills?.map((skill, index) => {
           return (
             <Chip
@@ -64,8 +64,8 @@ export default function ProjectCard({
         })}
       </div>
 
-      <Divider className="bg-[#ffffff18] my-3" />
-      <div className="flex justify-between px-4 w-full">
+      <Divider className="my-3 bg-[#ffffff18]" />
+      <div className="flex w-full justify-between px-4">
         <Link href={projectDetail.github} target="_blank">
           <Button isIconOnly color="primary" variant="bordered">
             <FaGithub />

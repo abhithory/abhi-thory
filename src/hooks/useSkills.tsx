@@ -1,19 +1,19 @@
-import { Chip } from "@nextui-org/react";
-import React, { ReactNode } from "react";
+import { Chip } from '@nextui-org/react';
+import React, { ReactNode } from 'react';
 import {
   BiLogoCss3,
   BiLogoJavascript,
   BiLogoSass,
   BiLogoTypescript,
-} from "react-icons/bi";
-import { FaDocker, FaEthereum, FaHardHat } from "react-icons/fa";
-import { SiNestjs, SiSolidity } from "react-icons/si";
+} from 'react-icons/bi';
+import { FaDocker, FaEthereum, FaHardHat } from 'react-icons/fa';
+import { SiNestjs, SiSolidity } from 'react-icons/si';
 import {
   TbBrandNextjs,
   TbBrandNodejs,
   TbBrandReact,
   TbBrandTailwind,
-} from "react-icons/tb";
+} from 'react-icons/tb';
 
 export type OneSkillObjectType = {
   name: string;
@@ -26,51 +26,51 @@ export type AllSkillsObjectType = {
 
 export const allSkills: AllSkillsObjectType = {
   reactjs: {
-    name: "ReactJs",
+    name: 'ReactJs',
     icon: <TbBrandReact />,
   },
   nextjs: {
-    name: "Nextjs",
+    name: 'Nextjs',
     icon: <TbBrandNextjs />,
   },
   nodejs: {
-    name: "Nodejs",
+    name: 'Nodejs',
     icon: <TbBrandNodejs />,
   },
   javascript: {
-    name: "JavaScript",
+    name: 'JavaScript',
     icon: <BiLogoJavascript />,
   },
   typescript: {
-    name: "Typescript",
+    name: 'Typescript',
     icon: <BiLogoTypescript />,
   },
   nestjs: {
-    name: "NestJs",
+    name: 'NestJs',
     icon: <SiNestjs />,
   },
   tailwindcss: {
-    name: "TailwindCss",
+    name: 'TailwindCss',
     icon: <TbBrandTailwind />,
   },
   sass: {
-    name: "Sass",
+    name: 'Sass',
     icon: <BiLogoSass />,
   },
   docker: {
-    name: "Docker",
+    name: 'Docker',
     icon: <FaDocker />,
   },
   solidity: {
-    name: "Solidity",
+    name: 'Solidity',
     icon: <SiSolidity />,
   },
   etherjs: {
-    name: "Ether.Js",
+    name: 'Ether.Js',
     icon: <FaEthereum />,
   },
   hardhat: {
-    name: "Hardhat",
+    name: 'Hardhat',
     icon: <FaHardHat />,
   },
 };
