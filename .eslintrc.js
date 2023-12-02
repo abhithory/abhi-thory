@@ -9,7 +9,7 @@ module.exports = {
     'plugin:react/recommended',
     'next',
     'next/core-web-vitals',
-    'prettier',
+    'plugin:prettier/recommended',
   ],
 
   overrides: [
@@ -28,7 +28,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'react'],
+  plugins: ['@typescript-eslint', 'react', 'prettier'],
   rules: {
     'no-unused-vars': 'warn',
     '@typescript-eslint/no-unused-vars': 'warn',

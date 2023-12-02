@@ -23,9 +23,6 @@ export const HelloDetails = () => {
 
 const Hero = () => {
   const { allSkills } = useSkills();
-
-  console.log('fadsfs');
-
   return (
     <div>
       <HelloDetails />

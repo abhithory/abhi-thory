@@ -25,7 +25,7 @@ const Navigation = () => {
     <nav
       // className={`w-full px-5 py-8 border-b min-h-[60px] border-b-[#ffffff32] transition-opacity ${active && "fixed top-0 left-0  z-[9999]"
       //   }`}
-      className={`} min-h-[60px] w-full border-b border-b-divider px-5 py-8`}
+      className={`} min-h-[60px] w-full border-b border-b-divider px-5  py-8`}
     >
       <div className="flex items-center justify-between ">
         <div className="block md:flex">

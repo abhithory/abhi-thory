@@ -8,16 +8,12 @@
     "start": "next start",
     "lint": "next lint",
     "check-format": "prettier --check .",
-    "check-lint": "eslint . --ext ts --ext tsx --ext js",
+    "check-lint": "eslint .",
+    "lint:fix": "eslint --fix .",
     "format": "prettier  . --write",
     "check-all": "npm run check-format && npm run check-lint",
-    "test-all": "npm run check-format && npm run check-lint &&  npm run build"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run check-all",
-      "pre-push": "npm run test-all"
-    }
+    "test-all": "npm run check-format && npm run check-lint &&  npm run build",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@nextui-org/react": "^2.2.9",
@@ -44,7 +40,7 @@
     "eslint-config-next": "14.0.3",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-react": "^7.33.2",
-    "husky": "^8.0.3",
+    "husky": "^8.0.0",
     "postcss": "^8",
     "prettier": "^3.1.0",
     "prettier-plugin-tailwindcss": "^0.5.7",
