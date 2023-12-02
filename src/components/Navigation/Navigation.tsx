@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
 
-type Props = {};
-
 const navItems = [
   {
     title: 'Hello',
@@ -10,7 +8,7 @@ const navItems = [
   },
 ];
 
-const Navigation = ({}: Props) => {
+const Navigation = () => {
   // const [active, setactive] = useState(false);
 
   // if (typeof window !== "undefined") {

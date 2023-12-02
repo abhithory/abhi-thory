@@ -6,7 +6,7 @@ import ProjectCard from '../Cards/ProjectCard';
 type Props = {
   projects: ProjectsObjectType;
   heading?: string;
-  carouselSettings?: {};
+  carouselSettings?: object;
 };
 
 export default function ProjectsCarousel({

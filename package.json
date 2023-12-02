@@ -12,6 +12,12 @@
     "format": "prettier  . --write",
     "test-all": "npm run check-format && npm run check-lint &&  npm run build"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run check-format && npm run check-lint",
+      "pre-push": "npm run test-all"
+    }
+  },
   "dependencies": {
     "@nextui-org/react": "^2.2.9",
     "framer-motion": "^10.16.5",
@@ -30,9 +36,13 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/react-slick": "^0.23.12",
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "@typescript-eslint/parser": "^6.13.1",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.3",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-react": "^7.33.2",
     "postcss": "^8",
     "prettier": "^3.1.0",
     "prettier-plugin-tailwindcss": "^0.5.7",

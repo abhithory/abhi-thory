@@ -6,8 +6,6 @@ import { Chip } from '@nextui-org/react';
 import useSkills from '@/hooks/useSkills';
 import Marquee from 'react-fast-marquee';
 
-type Props = {};
-
 export const HelloDetails = () => {
   const { renderSocialMediaLinks } = useSocialMediaLinks();
   return (
@@ -23,8 +21,10 @@ export const HelloDetails = () => {
   );
 };
 
-const Hero = ({}: Props) => {
+const Hero = () => {
   const { allSkills } = useSkills();
+
+  console.log('fadsfs');
 
   return (
     <div>

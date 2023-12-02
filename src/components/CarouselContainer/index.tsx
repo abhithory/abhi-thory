@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 
 type Props = {
   children: ReactNode;
-  settings?: {};
+  settings?: object;
 };
 
 export default function CarouselContainer({ children, settings }: Props) {

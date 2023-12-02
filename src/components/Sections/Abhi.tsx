@@ -3,9 +3,7 @@ import Image from 'next/image';
 import React from 'react';
 import Marquee from 'react-fast-marquee';
 
-type Props = {};
-
-export const Abhi = (props: Props) => {
+export const Abhi = () => {
   const renderReviews = () => {
     const reviews = [];
 

@@ -2,9 +2,7 @@ import useSocialMediaLinks from '@/hooks/useSocialMediaLinks';
 import { styles } from '@/styles/styles';
 import React from 'react';
 
-type Props = {};
-
-const Footer = (props: Props) => {
+const Footer = () => {
   const { renderSocialMediaLinks } = useSocialMediaLinks();
 
   return (

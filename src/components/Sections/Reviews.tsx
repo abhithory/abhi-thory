@@ -3,9 +3,7 @@ import Image from 'next/image';
 import React from 'react';
 import Marquee from 'react-fast-marquee';
 
-type Props = {};
-
-const Reviews = (props: Props) => {
+const Reviews = () => {
   const renderReviews = () => {
     const reviews = [];
 
