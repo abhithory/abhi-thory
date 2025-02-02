@@ -7,7 +7,7 @@ export const Abhi = () => {
   const renderReviews = () => {
     const reviews = [];
 
-    for (let i = 1; i <= 12; i++) {
+    for (let i = 1; i <= 17; i++) {
       reviews.push(
         <Image
           key={i}
@@ -15,7 +15,7 @@ export const Abhi = () => {
           alt=""
           width={300}
           height={300}
-          className=" cursor-pointerrounded-2xl mx-2  h-[300px] object-contain grayscale transition-transform hover:scale-105  hover:grayscale-0 md:h-[360px] xl:h-[400px]"
+          className=" mx-2 h-[400px] w-auto cursor-pointer rounded-2xl object-contain grayscale transition-transform hover:scale-105 hover:grayscale-0"
         />,
       );
     }
@@ -31,7 +31,7 @@ export const Abhi = () => {
       <div className="flex w-full justify-center pt-3">
         <div className="h-[2px] w-[50px] bg-primary" />
       </div>
-      <Marquee className="my-10 w-full" speed={80} pauseOnHover>
+      <Marquee className="my-10 w-full" speed={1000} pauseOnHover>
         {renderReviews()}
       </Marquee>
     </div>

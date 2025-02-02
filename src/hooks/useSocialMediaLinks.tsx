@@ -29,6 +29,10 @@ export default function useSocialMediaLinks() {
       icon: <FaTwitter />,
     },
     youtube: {
+      link: 'https://www.youtube.com/@abhi_shekhar',
+      icon: <FaYoutube />,
+    },
+    youtube2: {
       link: 'https://www.youtube.com/@abhithory',
       icon: <FaYoutube />,
     },
@@ -39,7 +43,7 @@ export default function useSocialMediaLinks() {
     },
     email: {
       link: 'mailto:abhishekthory001@gmail.com', // Replace with your email address
-      icon: <FaEnvelope />,
+      icon: <FaEnvelope className="text-blue-500" />,
     },
   };
 
@@ -51,7 +55,6 @@ export default function useSocialMediaLinks() {
           key={key}
           href={item.link}
           target={key === 'email' ? '_self' : '_blank'}
-          className="hover:text-primary"
         >
           {item.icon}
         </Link>

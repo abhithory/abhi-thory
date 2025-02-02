@@ -10,6 +10,20 @@ const config: Config = {
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    animation: {
+      fadeIn: 'fadeIn 0.5s ease-in forwards',
+    },
+    keyframes: {
+      fadeIn: {
+        '0%': { opacity: '0', transform: 'translateY(10px) rotate(-4deg)' },
+        '100%': { opacity: '1', transform: 'translateY(0) rotate(-4deg)' },
+      },
+    },
+    utilities: {
+      '.animation-delay-200': {
+        'animation-delay': '200ms',
+      },
+    },
     extend: {
       colors: {
         primary: '#f52041', //64FF4B F53250
